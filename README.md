@@ -7,6 +7,12 @@ The idea is to develop a automatic chicken house and provide it on a professiona
 
 TODO(FHk) -> write some information and documentation for the first version
 
+### The flying development structure
+![picture](./docs/readmeAppendices/V1_FlyingAssembly.jpg)
+
+### The Arduino Mega shield
+TODO(FHk)
+
 
 ### The more 'specialized' components you need to get 
 
