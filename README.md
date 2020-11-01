@@ -18,9 +18,8 @@ After completion of the development work it is planned to offer a clean PCB solu
 ### The stripboard solution
 ![front](./docs/readmeAppendices/V1_StripboardFront.jpg) ![back](./docs/readmeAppendices/V1_StripboardBack.jpg)
 
-<a name="V1_tableWithSpecializedComponents">
+<a name="V1_tableWithSpecializedComponents"></a>
 ### The more 'specialized' components you need to get
-
 | What | Link to further information and (possible) vendors | Detailed information | Realistic price (from a well-known auction platform with longer shipping time), mid 2020
 |---|---| ---------| ---|
 | MCU Board 'Mega 2560 PRO (Embed) CH340G/ATmega2560-16AU' | [https://robotdyn.com/mega-2560-pro-embed-ch340g-atmega2560-16au.html](https://robotdyn.com/mega-2560-pro-embed-ch340g-atmega2560-16au.html) |  <ul><li>[Dimensional drawing](https://robotdyn.com/pub/media/0G-00005641==MEGA-PRO-CH340GATmega2560/DOCS/DIM==0G-00005641==MEGA-PRO-CH340GATmega2560.pdf)</li><li>[Input and Output I/O diagram](https://robotdyn.com/pub/media/0G-00005641==MEGA-PRO-CH340GATmega2560/DOCS/PINOUT==0G-00005641==MEGA-PRO-CH340GATmega2560.pdf)</li><li>[Schematic](https://robotdyn.com/pub/media/0G-00005641==MEGA-PRO-CH340GATmega2560/DOCS/Schematic==0G-00005641==MEGA-PRO-CH340GATmega2560.pdf)</li></ul> | ~ 7,- €
