@@ -4,31 +4,31 @@ EELAYER END
 $Descr A3 11693 16535 portrait
 encoding utf-8
 Sheet 1 1
-Title ""
-Date ""
+Title "'Funky Chicken Door', Version 1 (flying assembly)"
+Date "2020-10-26"
 Rev ""
-Comp ""
+Comp "Florian Höck"
 Comment1 ""
 Comment2 ""
 Comment3 ""
 Comment4 ""
 $EndDescr
 $Comp
-L arduino:Arduino_Mega2560_Shield XA?
+L arduino:Arduino_Mega2560_Shield XA1
 U 1 1 5EDD6316
 P 2950 3450
-F 0 "XA?" H 2950 1069 60  0000 C CNN
+F 0 "XA1" H 2950 1069 60  0000 C CNN
 F 1 "Arduino_Mega2560_Shield" H 2950 963 60  0000 C CNN
-F 2 "" H 3650 6200 60  0001 C CNN
+F 2 "arduino:Arduino_Mega2560_Shield" H 3650 6200 60  0001 C CNN
 F 3 "https://store.arduino.cc/arduino-mega-2560-rev3" H 3650 6200 60  0001 C CNN
 	1    2950 3450
 	1    0    0    -1  
 $EndComp
 $Comp
-L Connector:Conn_01x16_Female J?
+L Connector:Conn_01x16_Female J6
 U 1 1 5EDD9B3A
 P 9950 4300
-F 0 "J?" H 9700 3250 50  0000 C CNN
+F 0 "J6" H 9700 3250 50  0000 C CNN
 F 1 "Conn_01x16_Female" H 10050 3350 50  0000 C CNN
 F 2 "" H 9950 4300 50  0001 C CNN
 F 3 "~" H 9950 4300 50  0001 C CNN
@@ -36,10 +36,10 @@ F 3 "~" H 9950 4300 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L power:GND #PWR?
+L power:GND #PWR0101
 U 1 1 5EDDB4FB
 P 850 4800
-F 0 "#PWR?" H 850 4550 50  0001 C CNN
+F 0 "#PWR0101" H 850 4550 50  0001 C CNN
 F 1 "GND" H 855 4627 50  0000 C CNN
 F 2 "" H 850 4800 50  0001 C CNN
 F 3 "" H 850 4800 50  0001 C CNN
@@ -47,33 +47,25 @@ F 3 "" H 850 4800 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	1650 4700 850  4700
+	1650 4700 1550 4700
 Wire Wire Line
 	850  4700 850  4800
 $Comp
-L power:GND #PWR?
+L power:GND #PWR0102
 U 1 1 5EDDCCDC
-P 8250 5600
-F 0 "#PWR?" H 8250 5350 50  0001 C CNN
-F 1 "GND" H 8255 5427 50  0000 C CNN
-F 2 "" H 8250 5600 50  0001 C CNN
-F 3 "" H 8250 5600 50  0001 C CNN
-	1    8250 5600
+P 9550 5450
+F 0 "#PWR0102" H 9550 5200 50  0001 C CNN
+F 1 "GND" H 9555 5277 50  0000 C CNN
+F 2 "" H 9550 5450 50  0001 C CNN
+F 3 "" H 9550 5450 50  0001 C CNN
+	1    9550 5450
 	1    0    0    -1  
 $EndComp
-Wire Wire Line
-	8250 5600 8250 5500
-Wire Wire Line
-	8250 5500 8850 5500
-Wire Wire Line
-	8250 5500 8250 3600
-Wire Wire Line
-	8250 3600 9750 3600
 $Comp
-L power:+3V3 #PWR?
+L power:+3V3 #PWR0103
 U 1 1 5EDDDAF5
 P 1300 5150
-F 0 "#PWR?" H 1300 5000 50  0001 C CNN
+F 0 "#PWR0103" H 1300 5000 50  0001 C CNN
 F 1 "+3V3" H 1315 5323 50  0000 C CNN
 F 2 "" H 1300 5150 50  0001 C CNN
 F 3 "" H 1300 5150 50  0001 C CNN
@@ -84,13 +76,10 @@ Wire Wire Line
 	1650 5200 1300 5200
 Wire Wire Line
 	1300 5200 1300 5150
-Connection ~ 8250 5500
 Text Notes 10000 5150 0    63   ~ 0
 01  GND\n02  VSS\n03  NC\n04  NC\n05  NC\n06  RESET\n07  A0\n08  SDA\n09  SCK\n10  CS\n11  SD - SCK\n12  SD - MISO\n13  SD - MOSI\n14  SD - CS\n15  LED +\n16  LED -
 Wire Wire Line
-	9750 5000 9550 5000
-Wire Wire Line
-	9750 4100 7950 4100
+	9750 4100 9250 4100
 Wire Wire Line
 	9750 4200 7150 4200
 Wire Wire Line
@@ -129,13 +118,13 @@ Text Label 5150 5400 2    50   ~ 0
 TFT_SPI_MOSI
 Text Label 5150 5500 2    50   ~ 0
 TFT_SPI_Clock
-Text Notes 7150 3300 0    50   ~ 10
+Text Notes 7050 3150 0    50   ~ 10
 1,8 inch 128x160 SPI Serial TFT LCD Display Modul + SD Card Slot\n(1,8TFT V1.0 !!!)
 $Comp
-L Connector:Conn_01x04_Female J?
+L Connector:Conn_01x04_Female J5
 U 1 1 5EE14116
 P 9950 1350
-F 0 "J?" H 9650 900 50  0000 L CNN
+F 0 "J5" H 9650 900 50  0000 L CNN
 F 1 "Conn_01x04_Female" H 9650 1000 50  0000 L CNN
 F 2 "" H 9950 1350 50  0001 C CNN
 F 3 "~" H 9950 1350 50  0001 C CNN
@@ -147,10 +136,10 @@ Text Notes 10000 1600 0    63   ~ 0
 Text Notes 8500 900  0    50   ~ 10
 RTC DS3231 I²C AT24C32 RealTimeClock
 $Comp
-L power:GND #PWR?
+L power:GND #PWR0104
 U 1 1 5EE1931E
 P 9550 1800
-F 0 "#PWR?" H 9550 1550 50  0001 C CNN
+F 0 "#PWR0104" H 9550 1550 50  0001 C CNN
 F 1 "GND" H 9555 1627 50  0000 C CNN
 F 2 "" H 9550 1800 50  0001 C CNN
 F 3 "" H 9550 1800 50  0001 C CNN
@@ -182,23 +171,23 @@ RTC_SDA
 Wire Wire Line
 	1650 2100 750  2100
 $Comp
-L Device:R R?
+L Device:R R9
 U 1 1 5EE28B8A
-P 9250 5100
-F 0 "R?" V 9043 5100 50  0000 C CNN
-F 1 "18R" V 9134 5100 50  0000 C CNN
-F 2 "" V 9180 5100 50  0001 C CNN
-F 3 "~" H 9250 5100 50  0001 C CNN
-	1    9250 5100
+P 9200 5000
+F 0 "R9" V 9300 5000 50  0000 C CNN
+F 1 "18R" V 9400 5000 50  0000 C CNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 9130 5000 50  0001 C CNN
+F 3 "~" H 9200 5000 50  0001 C CNN
+	1    9200 5000
 	0    1    1    0   
 $EndComp
 Wire Wire Line
-	9400 5100 9750 5100
+	9550 5100 9750 5100
 $Comp
-L power:+5V #PWR?
+L power:+5V #PWR0105
 U 1 1 5EE38FDB
 P 1050 5200
-F 0 "#PWR?" H 1050 5050 50  0001 C CNN
+F 0 "#PWR0105" H 1050 5050 50  0001 C CNN
 F 1 "+5V" H 1065 5373 50  0000 C CNN
 F 2 "" H 1050 5200 50  0001 C CNN
 F 3 "" H 1050 5200 50  0001 C CNN
@@ -210,26 +199,23 @@ Wire Wire Line
 Wire Wire Line
 	1050 5300 1050 5200
 $Comp
-L power:+5V #PWR?
+L power:+5V #PWR0106
 U 1 1 5EE3C499
-P 9550 3450
-F 0 "#PWR?" H 9550 3300 50  0001 C CNN
-F 1 "+5V" H 9565 3623 50  0000 C CNN
-F 2 "" H 9550 3450 50  0001 C CNN
-F 3 "" H 9550 3450 50  0001 C CNN
-	1    9550 3450
+P 9250 3500
+F 0 "#PWR0106" H 9250 3350 50  0001 C CNN
+F 1 "+5V" H 9265 3673 50  0000 C CNN
+F 2 "" H 9250 3500 50  0001 C CNN
+F 3 "" H 9250 3500 50  0001 C CNN
+	1    9250 3500
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	9750 3700 9550 3700
-Connection ~ 9550 3700
-Wire Wire Line
-	9550 3700 9550 5000
+	9750 3700 9400 3700
 $Comp
-L power:+5V #PWR?
+L power:+5V #PWR0107
 U 1 1 5EE41E7D
 P 9550 1200
-F 0 "#PWR?" H 9550 1050 50  0001 C CNN
+F 0 "#PWR0107" H 9550 1050 50  0001 C CNN
 F 1 "+5V" H 9565 1373 50  0000 C CNN
 F 2 "" H 9550 1200 50  0001 C CNN
 F 3 "" H 9550 1200 50  0001 C CNN
@@ -237,100 +223,69 @@ F 3 "" H 9550 1200 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Device:R R?
+L Device:R R5
 U 1 1 5EE6340C
-P 7950 3750
-F 0 "R?" H 8020 3796 50  0000 L CNN
-F 1 "10k" H 8020 3705 50  0000 L CNN
-F 2 "" V 7880 3750 50  0001 C CNN
-F 3 "~" H 7950 3750 50  0001 C CNN
-	1    7950 3750
+P 9250 3900
+F 0 "R5" H 9320 3946 50  0000 L CNN
+F 1 "2k2" H 9320 3855 50  0000 L CNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 9180 3900 50  0001 C CNN
+F 3 "~" H 9250 3900 50  0001 C CNN
+	1    9250 3900
 	1    0    0    -1  
 $EndComp
-Wire Wire Line
-	9550 3500 7950 3500
-Wire Wire Line
-	7950 3500 7950 3600
-Wire Wire Line
-	7950 3900 7950 4100
-Connection ~ 7950 4100
-Wire Wire Line
-	7950 4100 7150 4100
-$Comp
-L Transistor_BJT:BC547 Q?
-U 1 1 5F443A1A
-P 8750 5300
-F 0 "Q?" H 8941 5346 50  0000 L CNN
-F 1 "BC547" H 8941 5255 50  0000 L CNN
-F 2 "Package_TO_SOT_THT:TO-92_Inline" H 8950 5225 50  0001 L CIN
-F 3 "http://www.fairchildsemi.com/ds/BC/BC547.pdf" H 8750 5300 50  0001 L CNN
-	1    8750 5300
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	9550 3450 9550 3500
-Connection ~ 9550 3500
-Wire Wire Line
-	9550 3500 9550 3700
-Wire Wire Line
-	8850 5100 9100 5100
-Wire Wire Line
-	7800 5300 7150 5300
-Text Label 7150 5300 0    50   ~ 0
-TFT_Dimming
 Wire Wire Line
 	4250 1500 5150 1500
 Text Label 5150 1500 2    50   ~ 0
 TFT_Dimming
 $Comp
-L Switch:SW_Push SW?
+L Switch:SW_Push SW1
 U 1 1 5F501674
 P 7350 1250
-F 0 "SW?" H 7350 1535 50  0000 C CNN
+F 0 "SW1" H 7350 1535 50  0000 C CNN
 F 1 "SW_Push" H 7350 1444 50  0000 C CNN
-F 2 "" H 7350 1450 50  0001 C CNN
+F 2 "Button_Switch_THT:SW_PUSH_6mm_H9.5mm" H 7350 1450 50  0001 C CNN
 F 3 "~" H 7350 1450 50  0001 C CNN
 	1    7350 1250
 	1    0    0    -1  
 $EndComp
 $Comp
-L Switch:SW_Push SW?
+L Switch:SW_Push SW2
 U 1 1 5F502C2D
 P 7350 1650
-F 0 "SW?" H 7350 1935 50  0000 C CNN
+F 0 "SW2" H 7350 1935 50  0000 C CNN
 F 1 "SW_Push" H 7350 1844 50  0000 C CNN
-F 2 "" H 7350 1850 50  0001 C CNN
+F 2 "Button_Switch_THT:SW_PUSH_6mm_H9.5mm" H 7350 1850 50  0001 C CNN
 F 3 "~" H 7350 1850 50  0001 C CNN
 	1    7350 1650
 	1    0    0    -1  
 $EndComp
 $Comp
-L Switch:SW_Push SW?
+L Switch:SW_Push SW3
 U 1 1 5F503140
 P 7350 2050
-F 0 "SW?" H 7350 2335 50  0000 C CNN
+F 0 "SW3" H 7350 2335 50  0000 C CNN
 F 1 "SW_Push" H 7350 2244 50  0000 C CNN
-F 2 "" H 7350 2250 50  0001 C CNN
+F 2 "Button_Switch_THT:SW_PUSH_6mm_H9.5mm" H 7350 2250 50  0001 C CNN
 F 3 "~" H 7350 2250 50  0001 C CNN
 	1    7350 2050
 	1    0    0    -1  
 $EndComp
 $Comp
-L Switch:SW_Push SW?
+L Switch:SW_Push SW4
 U 1 1 5F503593
 P 7350 2450
-F 0 "SW?" H 7350 2735 50  0000 C CNN
+F 0 "SW4" H 7350 2735 50  0000 C CNN
 F 1 "SW_Push" H 7350 2644 50  0000 C CNN
-F 2 "" H 7350 2650 50  0001 C CNN
+F 2 "Button_Switch_THT:SW_PUSH_6mm_H9.5mm" H 7350 2650 50  0001 C CNN
 F 3 "~" H 7350 2650 50  0001 C CNN
 	1    7350 2450
 	1    0    0    -1  
 $EndComp
 $Comp
-L power:GND #PWR?
+L power:GND #PWR0108
 U 1 1 5F503BB5
 P 7750 2600
-F 0 "#PWR?" H 7750 2350 50  0001 C CNN
+F 0 "#PWR0108" H 7750 2350 50  0001 C CNN
 F 1 "GND" H 7755 2427 50  0000 C CNN
 F 2 "" H 7750 2600 50  0001 C CNN
 F 3 "" H 7750 2600 50  0001 C CNN
@@ -389,54 +344,32 @@ SW_UpButton
 Text Label 5150 2800 2    50   ~ 0
 SW_DownButton
 $Comp
-L Relay:FINDER-32.21-x000 K?
-U 1 1 5F501CC0
-P 7750 10750
-F 0 "K?" V 7183 10750 50  0000 C CNN
-F 1 "FINDER-32.21-x000" V 7274 10750 50  0000 C CNN
-F 2 "Relay_THT:Relay_SPST_Finder_32.21-x300" H 9020 10720 50  0001 C CNN
-F 3 "https://gfinder.findernet.com/assets/Series/355/S32EN.pdf" H 7750 10750 50  0001 C CNN
-	1    7750 10750
-	0    -1   1    0   
-$EndComp
-$Comp
-L Relay:FINDER-32.21-x000 K?
-U 1 1 5F5026DE
-P 7750 12650
-F 0 "K?" V 7183 12650 50  0000 C CNN
-F 1 "FINDER-32.21-x000" V 7274 12650 50  0000 C CNN
-F 2 "Relay_THT:Relay_SPST_Finder_32.21-x300" H 9020 12620 50  0001 C CNN
-F 3 "https://gfinder.findernet.com/assets/Series/355/S32EN.pdf" H 7750 12650 50  0001 C CNN
-	1    7750 12650
-	0    -1   1    0   
-$EndComp
-$Comp
-L Connector:Screw_Terminal_01x02 J?
+L Connector:Screw_Terminal_01x02 J7
 U 1 1 5F503A54
 P 10000 10950
-F 0 "J?" H 9900 10700 50  0000 L CNN
+F 0 "J7" H 9900 10700 50  0000 L CNN
 F 1 "Screw_Terminal_01x02" H 9900 10600 50  0000 L CNN
-F 2 "" H 10000 10950 50  0001 C CNN
+F 2 "TerminalBlock_MetzConnect:TerminalBlock_MetzConnect_Type011_RT05502HBWC_1x02_P5.00mm_Horizontal" H 10000 10950 50  0001 C CNN
 F 3 "~" H 10000 10950 50  0001 C CNN
 	1    10000 10950
 	1    0    0    -1  
 $EndComp
 $Comp
-L Connector:Screw_Terminal_01x02 J?
+L Connector:Screw_Terminal_01x02 J2
 U 1 1 5F5046AE
 P 6050 9200
-F 0 "J?" H 6250 9350 50  0000 C CNN
+F 0 "J2" H 6250 9350 50  0000 C CNN
 F 1 "Screw_Terminal_01x02" H 5900 9450 50  0000 C CNN
-F 2 "" H 6050 9200 50  0001 C CNN
+F 2 "TerminalBlock_MetzConnect:TerminalBlock_MetzConnect_Type011_RT05502HBWC_1x02_P5.00mm_Horizontal" H 6050 9200 50  0001 C CNN
 F 3 "~" H 6050 9200 50  0001 C CNN
 	1    6050 9200
 	-1   0    0    -1  
 $EndComp
 $Comp
-L Diode:1N4148 D?
+L Diode:1N4148 D2
 U 1 1 5F50C3DE
 P 7750 10000
-F 0 "D?" H 7750 10217 50  0000 C CNN
+F 0 "D2" H 7750 10217 50  0000 C CNN
 F 1 "1N4148" H 7750 10126 50  0000 C CNN
 F 2 "Diode_THT:D_DO-35_SOD27_P7.62mm_Horizontal" H 7750 9825 50  0001 C CNN
 F 3 "https://assets.nexperia.com/documents/data-sheet/1N4148_1N4448.pdf" H 7750 10000 50  0001 C CNN
@@ -444,10 +377,10 @@ F 3 "https://assets.nexperia.com/documents/data-sheet/1N4148_1N4448.pdf" H 7750 
 	1    0    0    -1  
 $EndComp
 $Comp
-L Diode:1N4148 D?
+L Diode:1N4148 D4
 U 1 1 5F50EE81
 P 7750 11900
-F 0 "D?" H 7750 12117 50  0000 C CNN
+F 0 "D4" H 7750 12117 50  0000 C CNN
 F 1 "1N4148" H 7750 12026 50  0000 C CNN
 F 2 "Diode_THT:D_DO-35_SOD27_P7.62mm_Horizontal" H 7750 11725 50  0001 C CNN
 F 3 "https://assets.nexperia.com/documents/data-sheet/1N4148_1N4448.pdf" H 7750 11900 50  0001 C CNN
@@ -501,23 +434,10 @@ DC Motor
 Text Notes 5450 9300 0    50   ~ 10
 Motor supply
 $Comp
-L Device:R R?
-U 1 1 5F548E1A
-P 7950 5300
-F 0 "R?" V 7743 5300 50  0000 C CNN
-F 1 "2k2" V 7834 5300 50  0000 C CNN
-F 2 "" V 7880 5300 50  0001 C CNN
-F 3 "~" H 7950 5300 50  0001 C CNN
-	1    7950 5300
-	0    1    1    0   
-$EndComp
-Wire Wire Line
-	8100 5300 8550 5300
-$Comp
-L power:+5V #PWR?
+L power:+5V #PWR0109
 U 1 1 5F557CA1
 P 7300 9500
-F 0 "#PWR?" H 7300 9350 50  0001 C CNN
+F 0 "#PWR0109" H 7300 9350 50  0001 C CNN
 F 1 "+5V" H 7315 9673 50  0000 C CNN
 F 2 "" H 7300 9500 50  0001 C CNN
 F 3 "" H 7300 9500 50  0001 C CNN
@@ -532,10 +452,10 @@ Wire Wire Line
 Connection ~ 7300 10550
 Connection ~ 7300 11900
 $Comp
-L Transistor_BJT:BC547 Q?
+L Transistor_BJT:BC547 Q2
 U 1 1 5F56381C
 P 8150 13900
-F 0 "Q?" H 8341 13946 50  0000 L CNN
+F 0 "Q2" H 8341 13946 50  0000 L CNN
 F 1 "BC547" H 8341 13855 50  0000 L CNN
 F 2 "Package_TO_SOT_THT:TO-92_Inline" H 8350 13825 50  0001 L CIN
 F 3 "http://www.fairchildsemi.com/ds/BC/BC547.pdf" H 8150 13900 50  0001 L CNN
@@ -543,12 +463,12 @@ F 3 "http://www.fairchildsemi.com/ds/BC/BC547.pdf" H 8150 13900 50  0001 L CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Device:R R?
+L Device:R R4
 U 1 1 5F5645D1
 P 7800 13900
-F 0 "R?" V 7593 13900 50  0000 C CNN
+F 0 "R4" V 7593 13900 50  0000 C CNN
 F 1 "2k2" V 7684 13900 50  0000 C CNN
-F 2 "" V 7730 13900 50  0001 C CNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 7730 13900 50  0001 C CNN
 F 3 "~" H 7800 13900 50  0001 C CNN
 	1    7800 13900
 	0    1    1    0   
@@ -557,10 +477,10 @@ Wire Wire Line
 	8250 12450 8250 13700
 Connection ~ 8250 12450
 $Comp
-L Transistor_BJT:BC547 Q?
+L Transistor_BJT:BC547 Q1
 U 1 1 5F566D22
 P 8550 13550
-F 0 "Q?" H 8741 13596 50  0000 L CNN
+F 0 "Q1" H 8741 13596 50  0000 L CNN
 F 1 "BC547" H 8741 13505 50  0000 L CNN
 F 2 "Package_TO_SOT_THT:TO-92_Inline" H 8750 13475 50  0001 L CIN
 F 3 "http://www.fairchildsemi.com/ds/BC/BC547.pdf" H 8550 13550 50  0001 L CNN
@@ -568,12 +488,12 @@ F 3 "http://www.fairchildsemi.com/ds/BC/BC547.pdf" H 8550 13550 50  0001 L CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Device:R R?
+L Device:R R3
 U 1 1 5F57161E
 P 7800 13550
-F 0 "R?" V 7593 13550 50  0000 C CNN
+F 0 "R3" V 7593 13550 50  0000 C CNN
 F 1 "2k2" V 7684 13550 50  0000 C CNN
-F 2 "" V 7730 13550 50  0001 C CNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 7730 13550 50  0001 C CNN
 F 3 "~" H 7800 13550 50  0001 C CNN
 	1    7800 13550
 	0    1    1    0   
@@ -586,14 +506,14 @@ Wire Wire Line
 	8650 10550 8650 13350
 Connection ~ 8250 10550
 $Comp
-L power:GND #PWR?
+L power:GND #PWR0110
 U 1 1 5F575FB0
-P 8450 14200
-F 0 "#PWR?" H 8450 13950 50  0001 C CNN
-F 1 "GND" H 8455 14027 50  0000 C CNN
-F 2 "" H 8450 14200 50  0001 C CNN
-F 3 "" H 8450 14200 50  0001 C CNN
-	1    8450 14200
+P 8450 14250
+F 0 "#PWR0110" H 8450 14000 50  0001 C CNN
+F 1 "GND" H 8455 14077 50  0000 C CNN
+F 2 "" H 8450 14250 50  0001 C CNN
+F 3 "" H 8450 14250 50  0001 C CNN
+	1    8450 14250
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
@@ -601,7 +521,7 @@ Wire Wire Line
 Wire Wire Line
 	8650 14100 8450 14100
 Wire Wire Line
-	8450 14200 8450 14100
+	8450 14250 8450 14100
 Connection ~ 8450 14100
 Wire Wire Line
 	8450 14100 8250 14100
@@ -622,32 +542,32 @@ DoorPositionUp
 Text Label 7150 7300 0    50   ~ 0
 DoorPositionDown
 $Comp
-L Connector:Screw_Terminal_01x02 J?
+L Connector:Screw_Terminal_01x02 J3
 U 1 1 5F597F19
 P 8200 6800
-F 0 "J?" H 8100 6550 50  0000 L CNN
+F 0 "J3" H 8100 6550 50  0000 L CNN
 F 1 "Screw_Terminal_01x02" H 8100 6450 50  0000 L CNN
-F 2 "" H 8200 6800 50  0001 C CNN
+F 2 "TerminalBlock_MetzConnect:TerminalBlock_MetzConnect_Type011_RT05502HBWC_1x02_P5.00mm_Horizontal" H 8200 6800 50  0001 C CNN
 F 3 "~" H 8200 6800 50  0001 C CNN
 	1    8200 6800
 	1    0    0    -1  
 $EndComp
 $Comp
-L Connector:Screw_Terminal_01x02 J?
+L Connector:Screw_Terminal_01x02 J4
 U 1 1 5F598429
 P 8200 7300
-F 0 "J?" H 8100 7050 50  0000 L CNN
+F 0 "J4" H 8100 7050 50  0000 L CNN
 F 1 "Screw_Terminal_01x02" H 8100 6950 50  0000 L CNN
-F 2 "" H 8200 7300 50  0001 C CNN
+F 2 "TerminalBlock_MetzConnect:TerminalBlock_MetzConnect_Type011_RT05502HBWC_1x02_P5.00mm_Horizontal" H 8200 7300 50  0001 C CNN
 F 3 "~" H 8200 7300 50  0001 C CNN
 	1    8200 7300
 	1    0    0    -1  
 $EndComp
 $Comp
-L power:GND #PWR?
+L power:GND #PWR0111
 U 1 1 5F598711
 P 7900 7550
-F 0 "#PWR?" H 7900 7300 50  0001 C CNN
+F 0 "#PWR0111" H 7900 7300 50  0001 C CNN
 F 1 "GND" H 7905 7377 50  0000 C CNN
 F 2 "" H 7900 7550 50  0001 C CNN
 F 3 "" H 7900 7550 50  0001 C CNN
@@ -694,10 +614,10 @@ Connection ~ 7150 10850
 Wire Wire Line
 	8450 11050 9500 11050
 $Comp
-L Diode:1N4448W D?
+L Diode:1N4448W D7
 U 1 1 5F7D8A86
 P 8900 10550
-F 0 "D?" V 8854 10630 50  0000 L CNN
+F 0 "D7" V 8854 10630 50  0000 L CNN
 F 1 "1N4448W" V 8945 10630 50  0000 L CNN
 F 2 "Diode_SMD:D_SOD-123" H 8900 10375 50  0001 C CNN
 F 3 "https://www.vishay.com/docs/85722/1n4448w.pdf" H 8900 10550 50  0001 C CNN
@@ -705,10 +625,10 @@ F 3 "https://www.vishay.com/docs/85722/1n4448w.pdf" H 8900 10550 50  0001 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L Diode:1N4448W D?
+L Diode:1N4448W D9
 U 1 1 5F7E0330
 P 9500 10550
-F 0 "D?" V 9454 10630 50  0000 L CNN
+F 0 "D9" V 9454 10630 50  0000 L CNN
 F 1 "1N4448W" V 9545 10630 50  0000 L CNN
 F 2 "Diode_SMD:D_SOD-123" H 9500 10375 50  0001 C CNN
 F 3 "https://www.vishay.com/docs/85722/1n4448w.pdf" H 9500 10550 50  0001 C CNN
@@ -716,10 +636,10 @@ F 3 "https://www.vishay.com/docs/85722/1n4448w.pdf" H 9500 10550 50  0001 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L Diode:1N4448W D?
+L Diode:1N4448W D8
 U 1 1 5F7E61FF
 P 8900 11500
-F 0 "D?" V 8854 11580 50  0000 L CNN
+F 0 "D8" V 8854 11580 50  0000 L CNN
 F 1 "1N4448W" V 8945 11580 50  0000 L CNN
 F 2 "Diode_SMD:D_SOD-123" H 8900 11325 50  0001 C CNN
 F 3 "https://www.vishay.com/docs/85722/1n4448w.pdf" H 8900 11500 50  0001 C CNN
@@ -727,10 +647,10 @@ F 3 "https://www.vishay.com/docs/85722/1n4448w.pdf" H 8900 11500 50  0001 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L Diode:1N4448W D?
+L Diode:1N4448W D10
 U 1 1 5F7E6E5A
 P 9500 11500
-F 0 "D?" V 9454 11580 50  0000 L CNN
+F 0 "D10" V 9454 11580 50  0000 L CNN
 F 1 "1N4448W" V 9545 11580 50  0000 L CNN
 F 2 "Diode_SMD:D_SOD-123" H 9500 11325 50  0001 C CNN
 F 3 "https://www.vishay.com/docs/85722/1n4448w.pdf" H 9500 11500 50  0001 C CNN
@@ -778,21 +698,10 @@ DoorPositionUp
 Wire Wire Line
 	4250 2900 5150 2900
 $Comp
-L Relay:FINDER-32.21-x000 K?
-U 1 1 5F85D4D3
-P 2950 10350
-F 0 "K?" V 2383 10350 50  0000 C CNN
-F 1 "FINDER-32.21-x000" V 2474 10350 50  0000 C CNN
-F 2 "Relay_THT:Relay_SPST_Finder_32.21-x300" H 4220 10320 50  0001 C CNN
-F 3 "https://gfinder.findernet.com/assets/Series/355/S32EN.pdf" H 2950 10350 50  0001 C CNN
-	1    2950 10350
-	0    -1   1    0   
-$EndComp
-$Comp
-L Diode:1N4148 D?
+L Diode:1N4148 D6
 U 1 1 5F85E160
 P 2950 9600
-F 0 "D?" H 2950 9817 50  0000 C CNN
+F 0 "D6" H 2950 9817 50  0000 C CNN
 F 1 "1N4148" H 2950 9726 50  0000 C CNN
 F 2 "Diode_THT:D_DO-35_SOD27_P7.62mm_Horizontal" H 2950 9425 50  0001 C CNN
 F 3 "https://assets.nexperia.com/documents/data-sheet/1N4148_1N4448.pdf" H 2950 9600 50  0001 C CNN
@@ -800,10 +709,10 @@ F 3 "https://assets.nexperia.com/documents/data-sheet/1N4148_1N4448.pdf" H 2950 
 	1    0    0    -1  
 $EndComp
 $Comp
-L Transistor_BJT:BC547 Q?
+L Transistor_BJT:BC547 Q3
 U 1 1 5F85EE78
 P 3450 11500
-F 0 "Q?" H 3641 11546 50  0000 L CNN
+F 0 "Q3" H 3641 11546 50  0000 L CNN
 F 1 "BC547" H 3641 11455 50  0000 L CNN
 F 2 "Package_TO_SOT_THT:TO-92_Inline" H 3650 11425 50  0001 L CIN
 F 3 "http://www.fairchildsemi.com/ds/BC/BC547.pdf" H 3450 11500 50  0001 L CNN
@@ -811,10 +720,10 @@ F 3 "http://www.fairchildsemi.com/ds/BC/BC547.pdf" H 3450 11500 50  0001 L CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L power:GND #PWR?
+L power:GND #PWR0112
 U 1 1 5F860503
 P 3550 11800
-F 0 "#PWR?" H 3550 11550 50  0001 C CNN
+F 0 "#PWR0112" H 3550 11550 50  0001 C CNN
 F 1 "GND" H 3555 11627 50  0000 C CNN
 F 2 "" H 3550 11800 50  0001 C CNN
 F 3 "" H 3550 11800 50  0001 C CNN
@@ -822,10 +731,10 @@ F 3 "" H 3550 11800 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L power:+5V #PWR?
+L power:+5V #PWR0113
 U 1 1 5F860EFF
 P 2400 9100
-F 0 "#PWR?" H 2400 8950 50  0001 C CNN
+F 0 "#PWR0113" H 2400 8950 50  0001 C CNN
 F 1 "+5V" H 2415 9273 50  0000 C CNN
 F 2 "" H 2400 9100 50  0001 C CNN
 F 3 "" H 2400 9100 50  0001 C CNN
@@ -833,12 +742,12 @@ F 3 "" H 2400 9100 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Connector:Screw_Terminal_01x03 J?
+L Connector:Screw_Terminal_01x03 J1
 U 1 1 5F862424
 P 3900 10950
-F 0 "J?" H 3980 10992 50  0000 L CNN
+F 0 "J1" H 3980 10992 50  0000 L CNN
 F 1 "Screw_Terminal_01x03" H 3980 10901 50  0000 L CNN
-F 2 "" H 3900 10950 50  0001 C CNN
+F 2 "TerminalBlock_MetzConnect:TerminalBlock_MetzConnect_Type011_RT05503HBWC_1x03_P5.00mm_Horizontal" H 3900 10950 50  0001 C CNN
 F 3 "~" H 3900 10950 50  0001 C CNN
 	1    3900 10950
 	1    0    0    -1  
@@ -884,12 +793,12 @@ Wire Wire Line
 Wire Wire Line
 	3250 11500 3000 11500
 $Comp
-L Device:R R?
+L Device:R R1
 U 1 1 5F85FA74
 P 2850 11500
-F 0 "R?" V 2643 11500 50  0000 C CNN
+F 0 "R1" V 2643 11500 50  0000 C CNN
 F 1 "2k2" V 2734 11500 50  0000 C CNN
-F 2 "" V 2780 11500 50  0001 C CNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 2780 11500 50  0001 C CNN
 F 3 "~" H 2850 11500 50  0001 C CNN
 	1    2850 11500
 	0    1    1    0   
@@ -905,23 +814,23 @@ IndoorLighting
 Text Notes 3700 10700 0    50   ~ 10
 IndoorLighting
 $Comp
-L Device:LED D?
+L Device:LED D1
 U 1 1 5F82C82D
 P 7600 9600
-F 0 "D?" H 7593 9345 50  0000 C CNN
+F 0 "D1" H 7593 9345 50  0000 C CNN
 F 1 "LED" H 7593 9436 50  0000 C CNN
-F 2 "" H 7600 9600 50  0001 C CNN
+F 2 "LED_THT:LED_D5.0mm" H 7600 9600 50  0001 C CNN
 F 3 "~" H 7600 9600 50  0001 C CNN
 	1    7600 9600
 	-1   0    0    1   
 $EndComp
 $Comp
-L Device:R R?
+L Device:R R7
 U 1 1 5F82E977
 P 8000 9600
-F 0 "R?" V 7793 9600 50  0000 C CNN
-F 1 "220" V 7884 9600 50  0000 C CNN
-F 2 "" V 7930 9600 50  0001 C CNN
+F 0 "R7" V 7793 9600 50  0000 C CNN
+F 1 "560" V 7884 9600 50  0000 C CNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 7930 9600 50  0001 C CNN
 F 3 "~" H 8000 9600 50  0001 C CNN
 	1    8000 9600
 	0    1    1    0   
@@ -929,23 +838,23 @@ $EndComp
 Wire Wire Line
 	7750 9600 7850 9600
 $Comp
-L Device:LED D?
+L Device:LED D3
 U 1 1 5F83B698
 P 7600 11550
-F 0 "D?" H 7593 11295 50  0000 C CNN
+F 0 "D3" H 7593 11295 50  0000 C CNN
 F 1 "LED" H 7593 11386 50  0000 C CNN
-F 2 "" H 7600 11550 50  0001 C CNN
+F 2 "LED_THT:LED_D5.0mm" H 7600 11550 50  0001 C CNN
 F 3 "~" H 7600 11550 50  0001 C CNN
 	1    7600 11550
 	-1   0    0    1   
 $EndComp
 $Comp
-L Device:R R?
+L Device:R R8
 U 1 1 5F83B69E
 P 8000 11550
-F 0 "R?" V 7793 11550 50  0000 C CNN
-F 1 "220" V 7884 11550 50  0000 C CNN
-F 2 "" V 7930 11550 50  0001 C CNN
+F 0 "R8" V 7793 11550 50  0000 C CNN
+F 1 "560" V 7884 11550 50  0000 C CNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 7930 11550 50  0001 C CNN
 F 3 "~" H 8000 11550 50  0001 C CNN
 	1    8000 11550
 	0    1    1    0   
@@ -973,23 +882,23 @@ Wire Wire Line
 	8250 11550 8150 11550
 Connection ~ 8250 11900
 $Comp
-L Device:LED D?
+L Device:LED D5
 U 1 1 5F9124BF
 P 2750 9200
-F 0 "D?" H 2743 8945 50  0000 C CNN
+F 0 "D5" H 2743 8945 50  0000 C CNN
 F 1 "LED" H 2743 9036 50  0000 C CNN
-F 2 "" H 2750 9200 50  0001 C CNN
+F 2 "LED_THT:LED_D5.0mm" H 2750 9200 50  0001 C CNN
 F 3 "~" H 2750 9200 50  0001 C CNN
 	1    2750 9200
 	-1   0    0    1   
 $EndComp
 $Comp
-L Device:R R?
+L Device:R R2
 U 1 1 5F9124C5
 P 3150 9200
-F 0 "R?" V 2943 9200 50  0000 C CNN
-F 1 "220" V 3034 9200 50  0000 C CNN
-F 2 "" V 3080 9200 50  0001 C CNN
+F 0 "R2" V 2943 9200 50  0000 C CNN
+F 1 "560" V 3034 9200 50  0000 C CNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 3080 9200 50  0001 C CNN
 F 3 "~" H 3150 9200 50  0001 C CNN
 	1    3150 9200
 	0    1    1    0   
@@ -1014,4 +923,232 @@ Text Notes 1800 8800 0    50   ~ 10
 Indoor lighting component\nConstraints:  maximum current < 6A
 Text Notes 7150 6550 0    50   ~ 10
 Position switches door steering\n(The position switches must be 'normally open')
+NoConn ~ 2700 850 
+NoConn ~ 2800 850 
+NoConn ~ 2900 850 
+NoConn ~ 3000 850 
+NoConn ~ 3100 850 
+NoConn ~ 3200 850 
+NoConn ~ 4250 1300
+NoConn ~ 4250 1400
+NoConn ~ 4250 2200
+NoConn ~ 4250 2300
+NoConn ~ 4250 2400
+NoConn ~ 4250 3100
+NoConn ~ 4250 3200
+NoConn ~ 4250 3300
+NoConn ~ 4250 3400
+NoConn ~ 4250 3500
+NoConn ~ 4250 3600
+NoConn ~ 4250 3700
+NoConn ~ 4250 3800
+NoConn ~ 4250 3900
+NoConn ~ 4250 4000
+NoConn ~ 4250 4100
+NoConn ~ 4250 4200
+NoConn ~ 4250 4300
+NoConn ~ 4250 4400
+NoConn ~ 4250 4500
+NoConn ~ 4250 4600
+NoConn ~ 4250 4700
+NoConn ~ 4250 4800
+NoConn ~ 4250 4900
+NoConn ~ 4250 5000
+NoConn ~ 4250 5100
+NoConn ~ 4250 5200
+NoConn ~ 4250 5300
+NoConn ~ 4250 5600
+NoConn ~ 1650 5600
+NoConn ~ 1650 5500
+NoConn ~ 1650 5400
+Wire Wire Line
+	1650 5100 1550 5100
+Wire Wire Line
+	1550 5100 1550 5000
+Connection ~ 1550 4700
+Wire Wire Line
+	1550 4700 850  4700
+Wire Wire Line
+	1650 4800 1550 4800
+Connection ~ 1550 4800
+Wire Wire Line
+	1550 4800 1550 4700
+Wire Wire Line
+	1650 4900 1550 4900
+Connection ~ 1550 4900
+Wire Wire Line
+	1550 4900 1550 4800
+Wire Wire Line
+	1650 5000 1550 5000
+Connection ~ 1550 5000
+Wire Wire Line
+	1550 5000 1550 4900
+NoConn ~ 1650 4500
+NoConn ~ 1650 4400
+NoConn ~ 1650 4200
+NoConn ~ 1650 4100
+NoConn ~ 1650 4000
+NoConn ~ 1650 3900
+NoConn ~ 1650 3800
+NoConn ~ 1650 3700
+NoConn ~ 1650 3600
+NoConn ~ 1650 3500
+NoConn ~ 1650 3400
+NoConn ~ 1650 3300
+NoConn ~ 1650 3200
+NoConn ~ 1650 3100
+NoConn ~ 1650 3000
+NoConn ~ 1650 2900
+NoConn ~ 1650 2800
+NoConn ~ 1650 2700
+NoConn ~ 1650 2600
+NoConn ~ 1650 2400
+NoConn ~ 1650 2300
+NoConn ~ 1650 2000
+NoConn ~ 1650 1900
+NoConn ~ 1650 1800
+NoConn ~ 1650 1700
+NoConn ~ 1650 1600
+NoConn ~ 1650 1500
+NoConn ~ 1650 1400
+NoConn ~ 1650 1300
+$Comp
+L power:PWR_FLAG #FLG0101
+U 1 1 5FB2632C
+P 850 4700
+F 0 "#FLG0101" H 850 4775 50  0001 C CNN
+F 1 "PWR_FLAG" H 850 4873 50  0000 C CNN
+F 2 "" H 850 4700 50  0001 C CNN
+F 3 "~" H 850 4700 50  0001 C CNN
+	1    850  4700
+	1    0    0    -1  
+$EndComp
+Connection ~ 850  4700
+$Comp
+L power:PWR_FLAG #FLG0102
+U 1 1 5FB26CD9
+P 1050 5550
+F 0 "#FLG0102" H 1050 5625 50  0001 C CNN
+F 1 "PWR_FLAG" H 1050 5723 50  0000 C CNN
+F 2 "" H 1050 5550 50  0001 C CNN
+F 3 "~" H 1050 5550 50  0001 C CNN
+	1    1050 5550
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	1050 5550 1050 5300
+Connection ~ 1050 5300
+$Comp
+L power:PWR_FLAG #FLG0103
+U 1 1 5FB3A3BE
+P 1300 5400
+F 0 "#FLG0103" H 1300 5475 50  0001 C CNN
+F 1 "PWR_FLAG" H 1300 5573 50  0000 C CNN
+F 2 "" H 1300 5400 50  0001 C CNN
+F 3 "~" H 1300 5400 50  0001 C CNN
+	1    1300 5400
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	1300 5400 1300 5200
+Connection ~ 1300 5200
+NoConn ~ 9750 3800
+NoConn ~ 9750 3900
+NoConn ~ 9750 4000
+NoConn ~ 9750 4600
+NoConn ~ 9750 4700
+NoConn ~ 9750 4800
+NoConn ~ 9750 4900
+$Comp
+L Relay:FINDER-36.11 K3
+U 1 1 5F99D2FC
+P 2950 10350
+F 0 "K3" V 2383 10350 50  0000 C CNN
+F 1 "FINDER-36.11" V 2474 10350 50  0000 C CNN
+F 2 "Relay_THT:Relay_SPDT_Finder_36.11" H 4220 10320 50  0001 C CNN
+F 3 "https://gfinder.findernet.com/public/attachments/36/EN/S36EN.pdf" H 2950 10350 50  0001 C CNN
+	1    2950 10350
+	0    -1   1    0   
+$EndComp
+$Comp
+L Relay:FINDER-36.11 K1
+U 1 1 5F99F108
+P 7750 10750
+F 0 "K1" V 7183 10750 50  0000 C CNN
+F 1 "FINDER-36.11" V 7274 10750 50  0000 C CNN
+F 2 "Relay_THT:Relay_SPDT_Finder_36.11" H 9020 10720 50  0001 C CNN
+F 3 "https://gfinder.findernet.com/public/attachments/36/EN/S36EN.pdf" H 7750 10750 50  0001 C CNN
+	1    7750 10750
+	0    -1   1    0   
+$EndComp
+$Comp
+L Relay:FINDER-36.11 K2
+U 1 1 5F99FB9A
+P 7750 12650
+F 0 "K2" V 7183 12650 50  0000 C CNN
+F 1 "FINDER-36.11" V 7274 12650 50  0000 C CNN
+F 2 "Relay_THT:Relay_SPDT_Finder_36.11" H 9020 12620 50  0001 C CNN
+F 3 "https://gfinder.findernet.com/public/attachments/36/EN/S36EN.pdf" H 7750 12650 50  0001 C CNN
+	1    7750 12650
+	0    -1   1    0   
+$EndComp
+Wire Wire Line
+	9350 5000 9750 5000
+Wire Wire Line
+	9550 3600 9550 5100
+Wire Wire Line
+	9550 3600 9750 3600
+Connection ~ 9550 5100
+Wire Wire Line
+	9550 5100 9550 5450
+Wire Wire Line
+	9250 4050 9250 4100
+Connection ~ 9250 4100
+Wire Wire Line
+	8800 5000 9050 5000
+Wire Wire Line
+	7150 4100 9250 4100
+Wire Wire Line
+	8800 4050 8800 5000
+$Comp
+L Transistor_BJT:BC557 Q4
+U 1 1 5F9FA10A
+P 8700 3850
+F 0 "Q4" H 8891 3804 50  0000 L CNN
+F 1 "BC557" H 8891 3895 50  0000 L CNN
+F 2 "Package_TO_SOT_THT:TO-92_Inline" H 8900 3775 50  0001 L CIN
+F 3 "https://www.onsemi.com/pub/Collateral/BC556BTA-D.pdf" H 8700 3850 50  0001 L CNN
+	1    8700 3850
+	1    0    0    1   
+$EndComp
+Wire Wire Line
+	8350 3850 8500 3850
+$Comp
+L Device:R R6
+U 1 1 5F548E1A
+P 8200 3850
+F 0 "R6" V 7993 3850 50  0000 C CNN
+F 1 "2k2" V 8084 3850 50  0000 C CNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 8130 3850 50  0001 C CNN
+F 3 "~" H 8200 3850 50  0001 C CNN
+	1    8200 3850
+	0    1    1    0   
+$EndComp
+Text Label 7150 3850 0    50   ~ 0
+TFT_Dimming
+Wire Wire Line
+	8050 3850 7150 3850
+Wire Wire Line
+	9250 3500 9250 3600
+Connection ~ 9250 3600
+Wire Wire Line
+	9400 3600 9250 3600
+Wire Wire Line
+	9250 3600 9250 3750
+Wire Wire Line
+	9400 3700 9400 3600
+Wire Wire Line
+	9250 3600 8800 3600
+Wire Wire Line
+	8800 3600 8800 3650
 $EndSCHEMATC

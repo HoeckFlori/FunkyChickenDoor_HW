@@ -1,0 +1,4 @@
+(fp_lib_table
+  (lib (name arduino)(type KiCad)(uri "/home/florian/Dokumente/Projekte Privat/2020_Huehnerstall/FunkyChickenDoor_HW/extLibs/arduino-kicad-library/Arduino.pretty")(options "")(descr ""))
+  (lib (name Displays)(type KiCad)(uri "/home/florian/Dokumente/Projekte Privat/2020_Huehnerstall/FunkyChickenDoor_HW/extLibs/SparkFun-KiCad-Libraries/Footprints/Displays.pretty")(options "")(descr ""))
+)
