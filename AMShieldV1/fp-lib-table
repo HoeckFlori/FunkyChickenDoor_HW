@@ -1,4 +1,9 @@
 (fp_lib_table
   (lib (name arduino)(type KiCad)(uri "/home/florian/Dokumente/Projekte Privat/2020_Huehnerstall/FunkyChickenDoor_HW/extLibs/arduino-kicad-library/Arduino.pretty")(options "")(descr ""))
   (lib (name Displays)(type KiCad)(uri "/home/florian/Dokumente/Projekte Privat/2020_Huehnerstall/FunkyChickenDoor_HW/extLibs/SparkFun-KiCad-Libraries/Footprints/Displays.pretty")(options "")(descr ""))
+  (lib (name Mega-2560-Pro-Mini)(type KiCad)(uri "/home/florian/Dokumente/Projekte Privat/2020_Huehnerstall/FunkyChickenDoor_HW/extLibs/Mega-2560-Pro-Mini")(options "")(descr ""))
+  (lib (name Mega2560_Pro_Mini_Meduino)(type KiCad)(uri "/home/florian/Dokumente/Projekte Privat/2020_Huehnerstall/FunkyChickenDoor_HW/extLibs/Mega2560_Pro_Mini_Meduino")(options "")(descr ""))
+  (lib (name MEGA_PRO_EMBED_CH340G___ATMEGA2560)(type KiCad)(uri "/home/florian/Dokumente/Projekte Privat/2020_Huehnerstall/FunkyChickenDoor_HW/extLibs/MEGA_PRO_EMBED_CH340G___ATMEGA2560")(options "")(descr ""))
+  (lib (name TC00500_DS3231_AT24C32)(type KiCad)(uri "/home/florian/Dokumente/Projekte Privat/2020_Huehnerstall/FunkyChickenDoor_HW/extLibs/TC00500_DS3231_AT24C32")(options "")(descr ""))
+  (lib (name KMR-1)(type KiCad)(uri "/home/florian/Dokumente/Projekte Privat/2020_Huehnerstall/FunkyChickenDoor_HW/extLibs/KMR-1.8 SPI Display")(options "")(descr ""))
 )

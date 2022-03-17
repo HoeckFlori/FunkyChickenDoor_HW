@@ -4,8 +4,8 @@ EELAYER END
 $Descr A3 11693 16535 portrait
 encoding utf-8
 Sheet 1 1
-Title "'Funky Chicken Door', Version 1 (flying assembly)"
-Date "2020-10-26"
+Title "'Funky Chicken Door', Version 1 (the development version)"
+Date "2020-11-01"
 Rev ""
 Comp "Florian Höck"
 Comment1 ""
@@ -14,334 +14,172 @@ Comment3 ""
 Comment4 ""
 $EndDescr
 $Comp
-L arduino:Arduino_Mega2560_Shield XA1
-U 1 1 5EDD6316
-P 2950 3450
-F 0 "XA1" H 2950 1069 60  0000 C CNN
-F 1 "Arduino_Mega2560_Shield" H 2950 963 60  0000 C CNN
-F 2 "arduino:Arduino_Mega2560_Shield" H 3650 6200 60  0001 C CNN
-F 3 "https://store.arduino.cc/arduino-mega-2560-rev3" H 3650 6200 60  0001 C CNN
-	1    2950 3450
-	1    0    0    -1  
-$EndComp
-$Comp
-L Connector:Conn_01x16_Female J6
-U 1 1 5EDD9B3A
-P 9950 4300
-F 0 "J6" H 9700 3250 50  0000 C CNN
-F 1 "Conn_01x16_Female" H 10050 3350 50  0000 C CNN
-F 2 "" H 9950 4300 50  0001 C CNN
-F 3 "~" H 9950 4300 50  0001 C CNN
-	1    9950 4300
-	1    0    0    -1  
-$EndComp
-$Comp
-L power:GND #PWR0101
-U 1 1 5EDDB4FB
-P 850 4800
-F 0 "#PWR0101" H 850 4550 50  0001 C CNN
-F 1 "GND" H 855 4627 50  0000 C CNN
-F 2 "" H 850 4800 50  0001 C CNN
-F 3 "" H 850 4800 50  0001 C CNN
-	1    850  4800
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	1650 4700 1550 4700
-Wire Wire Line
-	850  4700 850  4800
-$Comp
-L power:GND #PWR0102
+L power:GND #PWR013
 U 1 1 5EDDCCDC
-P 9550 5450
-F 0 "#PWR0102" H 9550 5200 50  0001 C CNN
-F 1 "GND" H 9555 5277 50  0000 C CNN
-F 2 "" H 9550 5450 50  0001 C CNN
-F 3 "" H 9550 5450 50  0001 C CNN
-	1    9550 5450
+P 8250 7800
+F 0 "#PWR013" H 8250 7550 50  0001 C CNN
+F 1 "GND" H 8255 7627 50  0000 C CNN
+F 2 "" H 8250 7800 50  0001 C CNN
+F 3 "" H 8250 7800 50  0001 C CNN
+	1    8250 7800
 	1    0    0    -1  
 $EndComp
-$Comp
-L power:+3V3 #PWR0103
-U 1 1 5EDDDAF5
-P 1300 5150
-F 0 "#PWR0103" H 1300 5000 50  0001 C CNN
-F 1 "+3V3" H 1315 5323 50  0000 C CNN
-F 2 "" H 1300 5150 50  0001 C CNN
-F 3 "" H 1300 5150 50  0001 C CNN
-	1    1300 5150
-	1    0    0    -1  
-$EndComp
+Text Notes 8700 7500 0    63   ~ 0
+01  GND\n02  VCC\n03  NC\n04  NC\n05  NC\n06  RESET\n07  A0\n08  SDA\n09  SCK\n10  CS\n11  SD - SCK\n12  SD - MISO\n13  SD - MOSI\n14  SD - CS\n15  LED +\n16  LED -
 Wire Wire Line
-	1650 5200 1300 5200
+	8450 6450 7950 6450
 Wire Wire Line
-	1300 5200 1300 5150
-Text Notes 10000 5150 0    63   ~ 0
-01  GND\n02  VSS\n03  NC\n04  NC\n05  NC\n06  RESET\n07  A0\n08  SDA\n09  SCK\n10  CS\n11  SD - SCK\n12  SD - MISO\n13  SD - MOSI\n14  SD - CS\n15  LED +\n16  LED -
+	8450 6550 5850 6550
 Wire Wire Line
-	9750 4100 9250 4100
+	8450 6650 5850 6650
 Wire Wire Line
-	9750 4200 7150 4200
+	8450 6750 5850 6750
 Wire Wire Line
-	9750 4300 7150 4300
-Wire Wire Line
-	9750 4400 7150 4400
-Wire Wire Line
-	9750 4500 7150 4500
-Text Label 7150 4100 0    50   ~ 0
+	8450 6850 5850 6850
+Text Label 5850 6450 0    50   ~ 0
 TFT_reset
-Text Label 7150 4200 0    50   ~ 0
+Text Label 5850 6550 0    50   ~ 0
 TFT_DataOrCommand
-Text Label 7150 4300 0    50   ~ 0
+Text Label 5850 6650 0    50   ~ 0
 TFT_SPI_MOSI
-Text Label 7150 4400 0    50   ~ 0
+Text Label 5850 6750 0    50   ~ 0
 TFT_SPI_Clock
-Text Label 7150 4500 0    50   ~ 0
+Text Label 5850 6850 0    50   ~ 0
 TFT_CS
-Wire Wire Line
-	4250 1900 5150 1900
-Wire Wire Line
-	4250 2000 5150 2000
-Wire Wire Line
-	4250 2100 5150 2100
-Wire Wire Line
-	4250 5400 5150 5400
-Wire Wire Line
-	4250 5500 5150 5500
-Text Label 5150 1900 2    50   ~ 0
-TFT_DataOrCommand
-Text Label 5150 2000 2    50   ~ 0
-TFT_reset
-Text Label 5150 2100 2    50   ~ 0
-TFT_CS
-Text Label 5150 5400 2    50   ~ 0
-TFT_SPI_MOSI
-Text Label 5150 5500 2    50   ~ 0
-TFT_SPI_Clock
-Text Notes 7050 3150 0    50   ~ 10
+Text Notes 5750 5500 0    50   ~ 10
 1,8 inch 128x160 SPI Serial TFT LCD Display Modul + SD Card Slot\n(1,8TFT V1.0 !!!)
-$Comp
-L Connector:Conn_01x04_Female J5
-U 1 1 5EE14116
-P 9950 1350
-F 0 "J5" H 9650 900 50  0000 L CNN
-F 1 "Conn_01x04_Female" H 9650 1000 50  0000 L CNN
-F 2 "" H 9950 1350 50  0001 C CNN
-F 3 "~" H 9950 1350 50  0001 C CNN
-	1    9950 1350
-	1    0    0    -1  
-$EndComp
-Text Notes 10000 1600 0    63   ~ 0
-01 SCL\n02 SDA\n03 VCC\n04 GND
-Text Notes 8500 900  0    50   ~ 10
+Text Notes 7850 1450 0    50   ~ 10
 RTC DS3231 I²C AT24C32 RealTimeClock
-$Comp
-L power:GND #PWR0104
-U 1 1 5EE1931E
-P 9550 1800
-F 0 "#PWR0104" H 9550 1550 50  0001 C CNN
-F 1 "GND" H 9555 1627 50  0000 C CNN
-F 2 "" H 9550 1800 50  0001 C CNN
-F 3 "" H 9550 1800 50  0001 C CNN
-	1    9550 1800
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	9750 1550 9550 1550
-Wire Wire Line
-	9550 1550 9550 1800
-Wire Wire Line
-	9750 1450 9550 1450
-Wire Wire Line
-	9550 1450 9550 1200
-Wire Wire Line
-	9750 1250 8500 1250
-Wire Wire Line
-	9750 1350 8500 1350
-Text Label 8500 1250 0    50   ~ 0
+Text Label 7850 1850 0    50   ~ 0
 RTC_SCL
-Text Label 8500 1350 0    50   ~ 0
+Text Label 7850 1950 0    50   ~ 0
 RTC_SDA
-Wire Wire Line
-	750  2200 1650 2200
-Text Label 750  2200 0    50   ~ 0
-RTC_SCL
-Text Label 750  2100 0    50   ~ 0
-RTC_SDA
-Wire Wire Line
-	1650 2100 750  2100
 $Comp
-L Device:R R9
+L Device:R R8
 U 1 1 5EE28B8A
-P 9200 5000
-F 0 "R9" V 9300 5000 50  0000 C CNN
-F 1 "18R" V 9400 5000 50  0000 C CNN
-F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 9130 5000 50  0001 C CNN
-F 3 "~" H 9200 5000 50  0001 C CNN
-	1    9200 5000
+P 7900 7350
+F 0 "R8" V 8000 7350 50  0000 C CNN
+F 1 "18R" V 8100 7350 50  0000 C CNN
+F 2 "Resistor_SMD:R_0805_2012Metric" V 7830 7350 50  0001 C CNN
+F 3 "~" H 7900 7350 50  0001 C CNN
+	1    7900 7350
 	0    1    1    0   
 $EndComp
 Wire Wire Line
-	9550 5100 9750 5100
+	8250 7450 8450 7450
 $Comp
-L power:+5V #PWR0105
-U 1 1 5EE38FDB
-P 1050 5200
-F 0 "#PWR0105" H 1050 5050 50  0001 C CNN
-F 1 "+5V" H 1065 5373 50  0000 C CNN
-F 2 "" H 1050 5200 50  0001 C CNN
-F 3 "" H 1050 5200 50  0001 C CNN
-	1    1050 5200
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	1650 5300 1050 5300
-Wire Wire Line
-	1050 5300 1050 5200
-$Comp
-L power:+5V #PWR0106
+L power:+5V #PWR010
 U 1 1 5EE3C499
-P 9250 3500
-F 0 "#PWR0106" H 9250 3350 50  0001 C CNN
-F 1 "+5V" H 9265 3673 50  0000 C CNN
-F 2 "" H 9250 3500 50  0001 C CNN
-F 3 "" H 9250 3500 50  0001 C CNN
-	1    9250 3500
+P 7950 5850
+F 0 "#PWR010" H 7950 5700 50  0001 C CNN
+F 1 "+5V" H 7965 6023 50  0000 C CNN
+F 2 "" H 7950 5850 50  0001 C CNN
+F 3 "" H 7950 5850 50  0001 C CNN
+	1    7950 5850
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	9750 3700 9400 3700
+	8450 6050 8100 6050
 $Comp
-L power:+5V #PWR0107
-U 1 1 5EE41E7D
-P 9550 1200
-F 0 "#PWR0107" H 9550 1050 50  0001 C CNN
-F 1 "+5V" H 9565 1373 50  0000 C CNN
-F 2 "" H 9550 1200 50  0001 C CNN
-F 3 "" H 9550 1200 50  0001 C CNN
-	1    9550 1200
-	1    0    0    -1  
-$EndComp
-$Comp
-L Device:R R5
+L Device:R R9
 U 1 1 5EE6340C
-P 9250 3900
-F 0 "R5" H 9320 3946 50  0000 L CNN
-F 1 "2k2" H 9320 3855 50  0000 L CNN
-F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 9180 3900 50  0001 C CNN
-F 3 "~" H 9250 3900 50  0001 C CNN
-	1    9250 3900
+P 7950 6250
+F 0 "R9" H 8020 6296 50  0000 L CNN
+F 1 "2k2" H 8020 6205 50  0000 L CNN
+F 2 "Resistor_SMD:R_0805_2012Metric" V 7880 6250 50  0001 C CNN
+F 3 "~" H 7950 6250 50  0001 C CNN
+	1    7950 6250
 	1    0    0    -1  
 $EndComp
-Wire Wire Line
-	4250 1500 5150 1500
-Text Label 5150 1500 2    50   ~ 0
-TFT_Dimming
 $Comp
 L Switch:SW_Push SW1
 U 1 1 5F501674
-P 7350 1250
-F 0 "SW1" H 7350 1535 50  0000 C CNN
-F 1 "SW_Push" H 7350 1444 50  0000 C CNN
-F 2 "Button_Switch_THT:SW_PUSH_6mm_H9.5mm" H 7350 1450 50  0001 C CNN
-F 3 "~" H 7350 1450 50  0001 C CNN
-	1    7350 1250
+P 6500 3400
+F 0 "SW1" H 6500 3685 50  0000 C CNN
+F 1 "SW_Push" H 6500 3594 50  0000 C CNN
+F 2 "Button_Switch_THT:SW_PUSH_6mm_H9.5mm" H 6500 3600 50  0001 C CNN
+F 3 "~" H 6500 3600 50  0001 C CNN
+	1    6500 3400
 	1    0    0    -1  
 $EndComp
 $Comp
 L Switch:SW_Push SW2
 U 1 1 5F502C2D
-P 7350 1650
-F 0 "SW2" H 7350 1935 50  0000 C CNN
-F 1 "SW_Push" H 7350 1844 50  0000 C CNN
-F 2 "Button_Switch_THT:SW_PUSH_6mm_H9.5mm" H 7350 1850 50  0001 C CNN
-F 3 "~" H 7350 1850 50  0001 C CNN
-	1    7350 1650
+P 6500 3800
+F 0 "SW2" H 6500 4085 50  0000 C CNN
+F 1 "SW_Push" H 6500 3994 50  0000 C CNN
+F 2 "Button_Switch_THT:SW_PUSH_6mm_H9.5mm" H 6500 4000 50  0001 C CNN
+F 3 "~" H 6500 4000 50  0001 C CNN
+	1    6500 3800
 	1    0    0    -1  
 $EndComp
 $Comp
 L Switch:SW_Push SW3
 U 1 1 5F503140
-P 7350 2050
-F 0 "SW3" H 7350 2335 50  0000 C CNN
-F 1 "SW_Push" H 7350 2244 50  0000 C CNN
-F 2 "Button_Switch_THT:SW_PUSH_6mm_H9.5mm" H 7350 2250 50  0001 C CNN
-F 3 "~" H 7350 2250 50  0001 C CNN
-	1    7350 2050
+P 6500 4200
+F 0 "SW3" H 6500 4485 50  0000 C CNN
+F 1 "SW_Push" H 6500 4394 50  0000 C CNN
+F 2 "Button_Switch_THT:SW_PUSH_6mm_H9.5mm" H 6500 4400 50  0001 C CNN
+F 3 "~" H 6500 4400 50  0001 C CNN
+	1    6500 4200
 	1    0    0    -1  
 $EndComp
 $Comp
 L Switch:SW_Push SW4
 U 1 1 5F503593
-P 7350 2450
-F 0 "SW4" H 7350 2735 50  0000 C CNN
-F 1 "SW_Push" H 7350 2644 50  0000 C CNN
-F 2 "Button_Switch_THT:SW_PUSH_6mm_H9.5mm" H 7350 2650 50  0001 C CNN
-F 3 "~" H 7350 2650 50  0001 C CNN
-	1    7350 2450
+P 6500 4600
+F 0 "SW4" H 6500 4885 50  0000 C CNN
+F 1 "SW_Push" H 6500 4794 50  0000 C CNN
+F 2 "Button_Switch_THT:SW_PUSH_6mm_H9.5mm" H 6500 4800 50  0001 C CNN
+F 3 "~" H 6500 4800 50  0001 C CNN
+	1    6500 4600
 	1    0    0    -1  
 $EndComp
 $Comp
-L power:GND #PWR0108
+L power:GND #PWR07
 U 1 1 5F503BB5
-P 7750 2600
-F 0 "#PWR0108" H 7750 2350 50  0001 C CNN
-F 1 "GND" H 7755 2427 50  0000 C CNN
-F 2 "" H 7750 2600 50  0001 C CNN
-F 3 "" H 7750 2600 50  0001 C CNN
-	1    7750 2600
+P 6900 4750
+F 0 "#PWR07" H 6900 4500 50  0001 C CNN
+F 1 "GND" H 6905 4577 50  0000 C CNN
+F 2 "" H 6900 4750 50  0001 C CNN
+F 3 "" H 6900 4750 50  0001 C CNN
+	1    6900 4750
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	7550 2450 7750 2450
+	6700 4600 6900 4600
 Wire Wire Line
-	7750 2450 7750 2600
+	6900 4600 6900 4750
 Wire Wire Line
-	7750 2450 7750 2050
+	6900 4600 6900 4200
 Wire Wire Line
-	7750 2050 7550 2050
-Connection ~ 7750 2450
+	6900 4200 6700 4200
+Connection ~ 6900 4600
 Wire Wire Line
-	7750 2050 7750 1650
+	6900 4200 6900 3800
 Wire Wire Line
-	7750 1650 7550 1650
-Connection ~ 7750 2050
+	6900 3800 6700 3800
+Connection ~ 6900 4200
 Wire Wire Line
-	7750 1650 7750 1250
+	6900 3800 6900 3400
 Wire Wire Line
-	7750 1250 7550 1250
-Connection ~ 7750 1650
+	6900 3400 6700 3400
+Connection ~ 6900 3800
 Wire Wire Line
-	6600 1250 7150 1250
+	5750 3400 6300 3400
 Wire Wire Line
-	7150 1650 6600 1650
+	6300 3800 5750 3800
 Wire Wire Line
-	7150 2050 6600 2050
+	6300 4200 5750 4200
 Wire Wire Line
-	7150 2450 6600 2450
-Text Label 6600 1250 0    50   ~ 0
+	6300 4600 5750 4600
+Text Label 5750 3400 0    50   ~ 0
 SW_BackButton
-Text Label 6600 1650 0    50   ~ 0
+Text Label 5750 3800 0    50   ~ 0
 SW_EnterButton
-Text Label 6600 2050 0    50   ~ 0
+Text Label 5750 4200 0    50   ~ 0
 SW_UpButton
-Text Label 6600 2450 0    50   ~ 0
-SW_DownButton
-Wire Wire Line
-	4250 2500 5150 2500
-Wire Wire Line
-	4250 2600 5150 2600
-Wire Wire Line
-	4250 2700 5150 2700
-Wire Wire Line
-	4250 2800 5150 2800
-Text Label 5150 2500 2    50   ~ 0
-SW_BackButton
-Text Label 5150 2600 2    50   ~ 0
-SW_EnterButton
-Text Label 5150 2700 2    50   ~ 0
-SW_UpButton
-Text Label 5150 2800 2    50   ~ 0
+Text Label 5750 4600 0    50   ~ 0
 SW_DownButton
 $Comp
 L Connector:Screw_Terminal_01x02 J7
@@ -349,7 +187,7 @@ U 1 1 5F503A54
 P 10000 10950
 F 0 "J7" H 9900 10700 50  0000 L CNN
 F 1 "Screw_Terminal_01x02" H 9900 10600 50  0000 L CNN
-F 2 "TerminalBlock_MetzConnect:TerminalBlock_MetzConnect_Type011_RT05502HBWC_1x02_P5.00mm_Horizontal" H 10000 10950 50  0001 C CNN
+F 2 "TerminalBlock_Phoenix:TerminalBlock_Phoenix_MKDS-1,5-2-5.08_1x02_P5.08mm_Horizontal" H 10000 10950 50  0001 C CNN
 F 3 "~" H 10000 10950 50  0001 C CNN
 	1    10000 10950
 	1    0    0    -1  
@@ -360,32 +198,10 @@ U 1 1 5F5046AE
 P 6050 9200
 F 0 "J2" H 6250 9350 50  0000 C CNN
 F 1 "Screw_Terminal_01x02" H 5900 9450 50  0000 C CNN
-F 2 "TerminalBlock_MetzConnect:TerminalBlock_MetzConnect_Type011_RT05502HBWC_1x02_P5.00mm_Horizontal" H 6050 9200 50  0001 C CNN
+F 2 "TerminalBlock_Phoenix:TerminalBlock_Phoenix_MKDS-1,5-2-5.08_1x02_P5.08mm_Horizontal" H 6050 9200 50  0001 C CNN
 F 3 "~" H 6050 9200 50  0001 C CNN
 	1    6050 9200
 	-1   0    0    -1  
-$EndComp
-$Comp
-L Diode:1N4148 D2
-U 1 1 5F50C3DE
-P 7750 10000
-F 0 "D2" H 7750 10217 50  0000 C CNN
-F 1 "1N4148" H 7750 10126 50  0000 C CNN
-F 2 "Diode_THT:D_DO-35_SOD27_P7.62mm_Horizontal" H 7750 9825 50  0001 C CNN
-F 3 "https://assets.nexperia.com/documents/data-sheet/1N4148_1N4448.pdf" H 7750 10000 50  0001 C CNN
-	1    7750 10000
-	1    0    0    -1  
-$EndComp
-$Comp
-L Diode:1N4148 D4
-U 1 1 5F50EE81
-P 7750 11900
-F 0 "D4" H 7750 12117 50  0000 C CNN
-F 1 "1N4148" H 7750 12026 50  0000 C CNN
-F 2 "Diode_THT:D_DO-35_SOD27_P7.62mm_Horizontal" H 7750 11725 50  0001 C CNN
-F 3 "https://assets.nexperia.com/documents/data-sheet/1N4148_1N4448.pdf" H 7750 11900 50  0001 C CNN
-	1    7750 11900
-	1    0    0    -1  
 $EndComp
 Wire Wire Line
 	7450 10550 7300 10550
@@ -434,10 +250,10 @@ DC Motor
 Text Notes 5450 9300 0    50   ~ 10
 Motor supply
 $Comp
-L power:+5V #PWR0109
+L power:+5V #PWR06
 U 1 1 5F557CA1
 P 7300 9500
-F 0 "#PWR0109" H 7300 9350 50  0001 C CNN
+F 0 "#PWR06" H 7300 9350 50  0001 C CNN
 F 1 "+5V" H 7315 9673 50  0000 C CNN
 F 2 "" H 7300 9500 50  0001 C CNN
 F 3 "" H 7300 9500 50  0001 C CNN
@@ -452,23 +268,12 @@ Wire Wire Line
 Connection ~ 7300 10550
 Connection ~ 7300 11900
 $Comp
-L Transistor_BJT:BC547 Q2
-U 1 1 5F56381C
-P 8150 13900
-F 0 "Q2" H 8341 13946 50  0000 L CNN
-F 1 "BC547" H 8341 13855 50  0000 L CNN
-F 2 "Package_TO_SOT_THT:TO-92_Inline" H 8350 13825 50  0001 L CIN
-F 3 "http://www.fairchildsemi.com/ds/BC/BC547.pdf" H 8150 13900 50  0001 L CNN
-	1    8150 13900
-	1    0    0    -1  
-$EndComp
-$Comp
 L Device:R R4
 U 1 1 5F5645D1
 P 7800 13900
 F 0 "R4" V 7593 13900 50  0000 C CNN
 F 1 "2k2" V 7684 13900 50  0000 C CNN
-F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 7730 13900 50  0001 C CNN
+F 2 "Resistor_SMD:R_0805_2012Metric" V 7730 13900 50  0001 C CNN
 F 3 "~" H 7800 13900 50  0001 C CNN
 	1    7800 13900
 	0    1    1    0   
@@ -477,23 +282,12 @@ Wire Wire Line
 	8250 12450 8250 13700
 Connection ~ 8250 12450
 $Comp
-L Transistor_BJT:BC547 Q1
-U 1 1 5F566D22
-P 8550 13550
-F 0 "Q1" H 8741 13596 50  0000 L CNN
-F 1 "BC547" H 8741 13505 50  0000 L CNN
-F 2 "Package_TO_SOT_THT:TO-92_Inline" H 8750 13475 50  0001 L CIN
-F 3 "http://www.fairchildsemi.com/ds/BC/BC547.pdf" H 8550 13550 50  0001 L CNN
-	1    8550 13550
-	1    0    0    -1  
-$EndComp
-$Comp
 L Device:R R3
 U 1 1 5F57161E
 P 7800 13550
 F 0 "R3" V 7593 13550 50  0000 C CNN
 F 1 "2k2" V 7684 13550 50  0000 C CNN
-F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 7730 13550 50  0001 C CNN
+F 2 "Resistor_SMD:R_0805_2012Metric" V 7730 13550 50  0001 C CNN
 F 3 "~" H 7800 13550 50  0001 C CNN
 	1    7800 13550
 	0    1    1    0   
@@ -506,10 +300,10 @@ Wire Wire Line
 	8650 10550 8650 13350
 Connection ~ 8250 10550
 $Comp
-L power:GND #PWR0110
+L power:GND #PWR09
 U 1 1 5F575FB0
 P 8450 14250
-F 0 "#PWR0110" H 8450 14000 50  0001 C CNN
+F 0 "#PWR09" H 8450 14000 50  0001 C CNN
 F 1 "GND" H 8455 14077 50  0000 C CNN
 F 2 "" H 8450 14250 50  0001 C CNN
 F 3 "" H 8450 14250 50  0001 C CNN
@@ -534,71 +328,59 @@ Motor_Up
 Text Label 6950 13900 0    50   ~ 0
 Motor_Down
 Wire Wire Line
-	8000 6800 7150 6800
+	2500 12450 1650 12450
 Wire Wire Line
-	8000 7300 7150 7300
-Text Label 7150 6800 0    50   ~ 0
+	2500 12950 1650 12950
+Text Label 1650 12450 0    50   ~ 0
 DoorPositionUp
-Text Label 7150 7300 0    50   ~ 0
+Text Label 1650 12950 0    50   ~ 0
 DoorPositionDown
 $Comp
 L Connector:Screw_Terminal_01x02 J3
 U 1 1 5F597F19
-P 8200 6800
-F 0 "J3" H 8100 6550 50  0000 L CNN
-F 1 "Screw_Terminal_01x02" H 8100 6450 50  0000 L CNN
-F 2 "TerminalBlock_MetzConnect:TerminalBlock_MetzConnect_Type011_RT05502HBWC_1x02_P5.00mm_Horizontal" H 8200 6800 50  0001 C CNN
-F 3 "~" H 8200 6800 50  0001 C CNN
-	1    8200 6800
+P 2700 12450
+F 0 "J3" H 2600 12200 50  0000 L CNN
+F 1 "Screw_Terminal_01x02" H 2600 12100 50  0000 L CNN
+F 2 "TerminalBlock_Phoenix:TerminalBlock_Phoenix_MKDS-1,5-2-5.08_1x02_P5.08mm_Horizontal" H 2700 12450 50  0001 C CNN
+F 3 "~" H 2700 12450 50  0001 C CNN
+	1    2700 12450
 	1    0    0    -1  
 $EndComp
 $Comp
 L Connector:Screw_Terminal_01x02 J4
 U 1 1 5F598429
-P 8200 7300
-F 0 "J4" H 8100 7050 50  0000 L CNN
-F 1 "Screw_Terminal_01x02" H 8100 6950 50  0000 L CNN
-F 2 "TerminalBlock_MetzConnect:TerminalBlock_MetzConnect_Type011_RT05502HBWC_1x02_P5.00mm_Horizontal" H 8200 7300 50  0001 C CNN
-F 3 "~" H 8200 7300 50  0001 C CNN
-	1    8200 7300
+P 2700 12950
+F 0 "J4" H 2600 12700 50  0000 L CNN
+F 1 "Screw_Terminal_01x02" H 2600 12600 50  0000 L CNN
+F 2 "TerminalBlock_Phoenix:TerminalBlock_Phoenix_MKDS-1,5-2-5.08_1x02_P5.08mm_Horizontal" H 2700 12950 50  0001 C CNN
+F 3 "~" H 2700 12950 50  0001 C CNN
+	1    2700 12950
 	1    0    0    -1  
 $EndComp
 $Comp
-L power:GND #PWR0111
+L power:GND #PWR08
 U 1 1 5F598711
-P 7900 7550
-F 0 "#PWR0111" H 7900 7300 50  0001 C CNN
-F 1 "GND" H 7905 7377 50  0000 C CNN
-F 2 "" H 7900 7550 50  0001 C CNN
-F 3 "" H 7900 7550 50  0001 C CNN
-	1    7900 7550
+P 2400 13200
+F 0 "#PWR08" H 2400 12950 50  0001 C CNN
+F 1 "GND" H 2405 13027 50  0000 C CNN
+F 2 "" H 2400 13200 50  0001 C CNN
+F 3 "" H 2400 13200 50  0001 C CNN
+	1    2400 13200
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	7900 7550 7900 7400
+	2400 13200 2400 13050
 Wire Wire Line
-	7900 7400 8000 7400
+	2400 13050 2500 13050
 Wire Wire Line
-	7900 7400 7900 6900
+	2400 13050 2400 12550
 Wire Wire Line
-	7900 6900 8000 6900
-Connection ~ 7900 7400
-Text Notes 8300 6900 0    50   ~ 10
+	2400 12550 2500 12550
+Connection ~ 2400 13050
+Text Notes 2800 12550 0    50   ~ 10
 Door flap switch UP position
-Text Notes 8300 7400 0    50   ~ 10
+Text Notes 2800 13050 0    50   ~ 10
 Door flap switch DOWN position
-Wire Wire Line
-	4250 3000 5150 3000
-Text Label 5150 3000 2    50   ~ 0
-DoorPositionDown
-Wire Wire Line
-	4250 1800 5150 1800
-Wire Wire Line
-	4250 1700 5150 1700
-Text Label 5150 1800 2    50   ~ 0
-Motor_Up
-Text Label 5150 1700 2    50   ~ 0
-Motor_Down
 Wire Wire Line
 	6250 9200 6950 9200
 Wire Wire Line
@@ -693,144 +475,107 @@ Wire Wire Line
 Wire Wire Line
 	9500 13200 9500 11650
 Connection ~ 8900 13200
-Text Label 5150 2900 2    50   ~ 0
-DoorPositionUp
-Wire Wire Line
-	4250 2900 5150 2900
 $Comp
-L Diode:1N4148 D6
-U 1 1 5F85E160
-P 2950 9600
-F 0 "D6" H 2950 9817 50  0000 C CNN
-F 1 "1N4148" H 2950 9726 50  0000 C CNN
-F 2 "Diode_THT:D_DO-35_SOD27_P7.62mm_Horizontal" H 2950 9425 50  0001 C CNN
-F 3 "https://assets.nexperia.com/documents/data-sheet/1N4148_1N4448.pdf" H 2950 9600 50  0001 C CNN
-	1    2950 9600
-	1    0    0    -1  
-$EndComp
-$Comp
-L Transistor_BJT:BC547 Q3
-U 1 1 5F85EE78
-P 3450 11500
-F 0 "Q3" H 3641 11546 50  0000 L CNN
-F 1 "BC547" H 3641 11455 50  0000 L CNN
-F 2 "Package_TO_SOT_THT:TO-92_Inline" H 3650 11425 50  0001 L CIN
-F 3 "http://www.fairchildsemi.com/ds/BC/BC547.pdf" H 3450 11500 50  0001 L CNN
-	1    3450 11500
-	1    0    0    -1  
-$EndComp
-$Comp
-L power:GND #PWR0112
+L power:GND #PWR02
 U 1 1 5F860503
-P 3550 11800
-F 0 "#PWR0112" H 3550 11550 50  0001 C CNN
-F 1 "GND" H 3555 11627 50  0000 C CNN
-F 2 "" H 3550 11800 50  0001 C CNN
-F 3 "" H 3550 11800 50  0001 C CNN
-	1    3550 11800
+P 3450 11000
+F 0 "#PWR02" H 3450 10750 50  0001 C CNN
+F 1 "GND" H 3455 10827 50  0000 C CNN
+F 2 "" H 3450 11000 50  0001 C CNN
+F 3 "" H 3450 11000 50  0001 C CNN
+	1    3450 11000
 	1    0    0    -1  
 $EndComp
 $Comp
-L power:+5V #PWR0113
+L power:+5V #PWR01
 U 1 1 5F860EFF
-P 2400 9100
-F 0 "#PWR0113" H 2400 8950 50  0001 C CNN
-F 1 "+5V" H 2415 9273 50  0000 C CNN
-F 2 "" H 2400 9100 50  0001 C CNN
-F 3 "" H 2400 9100 50  0001 C CNN
-	1    2400 9100
+P 2300 8300
+F 0 "#PWR01" H 2300 8150 50  0001 C CNN
+F 1 "+5V" H 2315 8473 50  0000 C CNN
+F 2 "" H 2300 8300 50  0001 C CNN
+F 3 "" H 2300 8300 50  0001 C CNN
+	1    2300 8300
 	1    0    0    -1  
 $EndComp
 $Comp
 L Connector:Screw_Terminal_01x03 J1
 U 1 1 5F862424
-P 3900 10950
-F 0 "J1" H 3980 10992 50  0000 L CNN
-F 1 "Screw_Terminal_01x03" H 3980 10901 50  0000 L CNN
-F 2 "TerminalBlock_MetzConnect:TerminalBlock_MetzConnect_Type011_RT05503HBWC_1x03_P5.00mm_Horizontal" H 3900 10950 50  0001 C CNN
-F 3 "~" H 3900 10950 50  0001 C CNN
-	1    3900 10950
+P 3800 10150
+F 0 "J1" H 3880 10192 50  0000 L CNN
+F 1 "Screw_Terminal_01x03" H 3880 10101 50  0000 L CNN
+F 2 "TerminalBlock_Phoenix:TerminalBlock_Phoenix_MKDS-1,5-3-5.08_1x03_P5.08mm_Horizontal" H 3800 10150 50  0001 C CNN
+F 3 "~" H 3800 10150 50  0001 C CNN
+	1    3800 10150
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	3700 10850 2550 10850
+	3600 10050 2450 10050
 Wire Wire Line
-	2550 10850 2550 10650
+	2450 10050 2450 9850
 Wire Wire Line
-	2550 10650 2650 10650
+	2450 9850 2550 9850
 Wire Wire Line
-	3700 10950 3450 10950
+	3600 10150 3350 10150
 Wire Wire Line
-	3450 10950 3450 10550
+	3350 10150 3350 9750
 Wire Wire Line
-	3450 10550 3250 10550
+	3350 9750 3150 9750
 Wire Wire Line
-	3700 11050 2400 11050
+	3600 10250 2300 10250
 Wire Wire Line
-	2400 11050 2400 10450
+	2300 10250 2300 9650
 Wire Wire Line
-	2400 10450 2650 10450
+	2300 9650 2550 9650
 Wire Wire Line
-	2650 10150 2400 10150
+	2550 9350 2300 9350
 Wire Wire Line
-	2400 10150 2400 9600
+	3000 8800 3450 8800
 Wire Wire Line
-	2800 9600 2400 9600
-Connection ~ 2400 9600
+	3450 8800 3450 9350
 Wire Wire Line
-	2400 9600 2400 9200
+	3150 9350 3450 9350
+Connection ~ 3450 9350
 Wire Wire Line
-	3100 9600 3550 9600
+	3450 9350 3450 10500
 Wire Wire Line
-	3550 9600 3550 10150
+	3450 11000 3450 10900
 Wire Wire Line
-	3250 10150 3550 10150
-Connection ~ 3550 10150
-Wire Wire Line
-	3550 10150 3550 11300
-Wire Wire Line
-	3550 11800 3550 11700
-Wire Wire Line
-	3250 11500 3000 11500
+	3150 10700 2900 10700
 $Comp
 L Device:R R1
 U 1 1 5F85FA74
-P 2850 11500
-F 0 "R1" V 2643 11500 50  0000 C CNN
-F 1 "2k2" V 2734 11500 50  0000 C CNN
-F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 2780 11500 50  0001 C CNN
-F 3 "~" H 2850 11500 50  0001 C CNN
-	1    2850 11500
+P 2750 10700
+F 0 "R1" V 2543 10700 50  0000 C CNN
+F 1 "2k2" V 2634 10700 50  0000 C CNN
+F 2 "Resistor_SMD:R_0805_2012Metric" V 2680 10700 50  0001 C CNN
+F 3 "~" H 2750 10700 50  0001 C CNN
+	1    2750 10700
 	0    1    1    0   
 $EndComp
 Wire Wire Line
-	2700 11500 1800 11500
-Text Label 1800 11500 0    50   ~ 0
+	2600 10700 1700 10700
+Text Label 1700 10700 0    50   ~ 0
 IndoorLighting
-Wire Wire Line
-	4250 1600 5150 1600
-Text Label 5150 1600 2    50   ~ 0
-IndoorLighting
-Text Notes 3700 10700 0    50   ~ 10
+Text Notes 3600 9900 0    50   ~ 10
 IndoorLighting
 $Comp
-L Device:LED D1
+L Device:LED D3
 U 1 1 5F82C82D
 P 7600 9600
-F 0 "D1" H 7593 9345 50  0000 C CNN
+F 0 "D3" H 7593 9345 50  0000 C CNN
 F 1 "LED" H 7593 9436 50  0000 C CNN
-F 2 "LED_THT:LED_D5.0mm" H 7600 9600 50  0001 C CNN
+F 2 "LED_SMD:LED_1206_3216Metric" H 7600 9600 50  0001 C CNN
 F 3 "~" H 7600 9600 50  0001 C CNN
 	1    7600 9600
 	-1   0    0    1   
 $EndComp
 $Comp
-L Device:R R7
+L Device:R R5
 U 1 1 5F82E977
 P 8000 9600
-F 0 "R7" V 7793 9600 50  0000 C CNN
+F 0 "R5" V 7793 9600 50  0000 C CNN
 F 1 "560" V 7884 9600 50  0000 C CNN
-F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 7930 9600 50  0001 C CNN
+F 2 "Resistor_SMD:R_0805_2012Metric" V 7930 9600 50  0001 C CNN
 F 3 "~" H 8000 9600 50  0001 C CNN
 	1    8000 9600
 	0    1    1    0   
@@ -838,23 +583,23 @@ $EndComp
 Wire Wire Line
 	7750 9600 7850 9600
 $Comp
-L Device:LED D3
+L Device:LED D4
 U 1 1 5F83B698
 P 7600 11550
-F 0 "D3" H 7593 11295 50  0000 C CNN
+F 0 "D4" H 7593 11295 50  0000 C CNN
 F 1 "LED" H 7593 11386 50  0000 C CNN
-F 2 "LED_THT:LED_D5.0mm" H 7600 11550 50  0001 C CNN
+F 2 "LED_SMD:LED_1206_3216Metric" H 7600 11550 50  0001 C CNN
 F 3 "~" H 7600 11550 50  0001 C CNN
 	1    7600 11550
 	-1   0    0    1   
 $EndComp
 $Comp
-L Device:R R8
+L Device:R R6
 U 1 1 5F83B69E
 P 8000 11550
-F 0 "R8" V 7793 11550 50  0000 C CNN
+F 0 "R6" V 7793 11550 50  0000 C CNN
 F 1 "560" V 7884 11550 50  0000 C CNN
-F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 7930 11550 50  0001 C CNN
+F 2 "Resistor_SMD:R_0805_2012Metric" V 7930 11550 50  0001 C CNN
 F 3 "~" H 8000 11550 50  0001 C CNN
 	1    8000 11550
 	0    1    1    0   
@@ -882,199 +627,66 @@ Wire Wire Line
 	8250 11550 8150 11550
 Connection ~ 8250 11900
 $Comp
-L Device:LED D5
+L Device:LED D1
 U 1 1 5F9124BF
-P 2750 9200
-F 0 "D5" H 2743 8945 50  0000 C CNN
-F 1 "LED" H 2743 9036 50  0000 C CNN
-F 2 "LED_THT:LED_D5.0mm" H 2750 9200 50  0001 C CNN
-F 3 "~" H 2750 9200 50  0001 C CNN
-	1    2750 9200
+P 2650 8400
+F 0 "D1" H 2643 8145 50  0000 C CNN
+F 1 "LED" H 2643 8236 50  0000 C CNN
+F 2 "LED_SMD:LED_1206_3216Metric" H 2650 8400 50  0001 C CNN
+F 3 "~" H 2650 8400 50  0001 C CNN
+	1    2650 8400
 	-1   0    0    1   
 $EndComp
 $Comp
 L Device:R R2
 U 1 1 5F9124C5
-P 3150 9200
-F 0 "R2" V 2943 9200 50  0000 C CNN
-F 1 "560" V 3034 9200 50  0000 C CNN
-F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 3080 9200 50  0001 C CNN
-F 3 "~" H 3150 9200 50  0001 C CNN
-	1    3150 9200
+P 3050 8400
+F 0 "R2" V 2843 8400 50  0000 C CNN
+F 1 "560" V 2934 8400 50  0000 C CNN
+F 2 "Resistor_SMD:R_0805_2012Metric" V 2980 8400 50  0001 C CNN
+F 3 "~" H 3050 8400 50  0001 C CNN
+	1    3050 8400
 	0    1    1    0   
 $EndComp
 Wire Wire Line
-	2900 9200 3000 9200
+	2800 8400 2900 8400
 Wire Wire Line
-	2600 9200 2400 9200
-Connection ~ 2400 9200
+	2500 8400 2300 8400
+Connection ~ 2300 8400
 Wire Wire Line
-	2400 9200 2400 9100
+	2300 8400 2300 8300
 Wire Wire Line
-	3550 9200 3550 9600
+	3450 8400 3450 8800
 Wire Wire Line
-	3300 9200 3550 9200
-Connection ~ 3550 9600
-Text Notes 6600 900  0    50   ~ 10
+	3200 8400 3450 8400
+Connection ~ 3450 8800
+Text Notes 5750 3050 0    50   ~ 10
 Button (input) array
 Text Notes 5450 8800 0    50   ~ 10
 Motor control component\nConstraints:  DC Motor, maximum current < 6A,  Voltage <= 50V
-Text Notes 1800 8800 0    50   ~ 10
+Text Notes 1700 8000 0    50   ~ 10
 Indoor lighting component\nConstraints:  maximum current < 6A
-Text Notes 7150 6550 0    50   ~ 10
+Text Notes 1650 12200 0    50   ~ 10
 Position switches door steering\n(The position switches must be 'normally open')
-NoConn ~ 2700 850 
-NoConn ~ 2800 850 
-NoConn ~ 2900 850 
-NoConn ~ 3000 850 
-NoConn ~ 3100 850 
-NoConn ~ 3200 850 
-NoConn ~ 4250 1300
-NoConn ~ 4250 1400
-NoConn ~ 4250 2200
-NoConn ~ 4250 2300
-NoConn ~ 4250 2400
-NoConn ~ 4250 3100
-NoConn ~ 4250 3200
-NoConn ~ 4250 3300
-NoConn ~ 4250 3400
-NoConn ~ 4250 3500
-NoConn ~ 4250 3600
-NoConn ~ 4250 3700
-NoConn ~ 4250 3800
-NoConn ~ 4250 3900
-NoConn ~ 4250 4000
-NoConn ~ 4250 4100
-NoConn ~ 4250 4200
-NoConn ~ 4250 4300
-NoConn ~ 4250 4400
-NoConn ~ 4250 4500
-NoConn ~ 4250 4600
-NoConn ~ 4250 4700
-NoConn ~ 4250 4800
-NoConn ~ 4250 4900
-NoConn ~ 4250 5000
-NoConn ~ 4250 5100
-NoConn ~ 4250 5200
-NoConn ~ 4250 5300
-NoConn ~ 4250 5600
-NoConn ~ 1650 5600
-NoConn ~ 1650 5500
-NoConn ~ 1650 5400
-Wire Wire Line
-	1650 5100 1550 5100
-Wire Wire Line
-	1550 5100 1550 5000
-Connection ~ 1550 4700
-Wire Wire Line
-	1550 4700 850  4700
-Wire Wire Line
-	1650 4800 1550 4800
-Connection ~ 1550 4800
-Wire Wire Line
-	1550 4800 1550 4700
-Wire Wire Line
-	1650 4900 1550 4900
-Connection ~ 1550 4900
-Wire Wire Line
-	1550 4900 1550 4800
-Wire Wire Line
-	1650 5000 1550 5000
-Connection ~ 1550 5000
-Wire Wire Line
-	1550 5000 1550 4900
-NoConn ~ 1650 4500
-NoConn ~ 1650 4400
-NoConn ~ 1650 4200
-NoConn ~ 1650 4100
-NoConn ~ 1650 4000
-NoConn ~ 1650 3900
-NoConn ~ 1650 3800
-NoConn ~ 1650 3700
-NoConn ~ 1650 3600
-NoConn ~ 1650 3500
-NoConn ~ 1650 3400
-NoConn ~ 1650 3300
-NoConn ~ 1650 3200
-NoConn ~ 1650 3100
-NoConn ~ 1650 3000
-NoConn ~ 1650 2900
-NoConn ~ 1650 2800
-NoConn ~ 1650 2700
-NoConn ~ 1650 2600
-NoConn ~ 1650 2400
-NoConn ~ 1650 2300
-NoConn ~ 1650 2000
-NoConn ~ 1650 1900
-NoConn ~ 1650 1800
-NoConn ~ 1650 1700
-NoConn ~ 1650 1600
-NoConn ~ 1650 1500
-NoConn ~ 1650 1400
-NoConn ~ 1650 1300
+NoConn ~ 8450 6150
+NoConn ~ 8450 6250
+NoConn ~ 8450 6350
 $Comp
-L power:PWR_FLAG #FLG0101
-U 1 1 5FB2632C
-P 850 4700
-F 0 "#FLG0101" H 850 4775 50  0001 C CNN
-F 1 "PWR_FLAG" H 850 4873 50  0000 C CNN
-F 2 "" H 850 4700 50  0001 C CNN
-F 3 "~" H 850 4700 50  0001 C CNN
-	1    850  4700
-	1    0    0    -1  
-$EndComp
-Connection ~ 850  4700
-$Comp
-L power:PWR_FLAG #FLG0102
-U 1 1 5FB26CD9
-P 1050 5550
-F 0 "#FLG0102" H 1050 5625 50  0001 C CNN
-F 1 "PWR_FLAG" H 1050 5723 50  0000 C CNN
-F 2 "" H 1050 5550 50  0001 C CNN
-F 3 "~" H 1050 5550 50  0001 C CNN
-	1    1050 5550
-	-1   0    0    1   
-$EndComp
-Wire Wire Line
-	1050 5550 1050 5300
-Connection ~ 1050 5300
-$Comp
-L power:PWR_FLAG #FLG0103
-U 1 1 5FB3A3BE
-P 1300 5400
-F 0 "#FLG0103" H 1300 5475 50  0001 C CNN
-F 1 "PWR_FLAG" H 1300 5573 50  0000 C CNN
-F 2 "" H 1300 5400 50  0001 C CNN
-F 3 "~" H 1300 5400 50  0001 C CNN
-	1    1300 5400
-	-1   0    0    1   
-$EndComp
-Wire Wire Line
-	1300 5400 1300 5200
-Connection ~ 1300 5200
-NoConn ~ 9750 3800
-NoConn ~ 9750 3900
-NoConn ~ 9750 4000
-NoConn ~ 9750 4600
-NoConn ~ 9750 4700
-NoConn ~ 9750 4800
-NoConn ~ 9750 4900
-$Comp
-L Relay:FINDER-36.11 K3
+L Relay:FINDER-36.11 K1
 U 1 1 5F99D2FC
-P 2950 10350
-F 0 "K3" V 2383 10350 50  0000 C CNN
-F 1 "FINDER-36.11" V 2474 10350 50  0000 C CNN
-F 2 "Relay_THT:Relay_SPDT_Finder_36.11" H 4220 10320 50  0001 C CNN
-F 3 "https://gfinder.findernet.com/public/attachments/36/EN/S36EN.pdf" H 2950 10350 50  0001 C CNN
-	1    2950 10350
+P 2850 9550
+F 0 "K1" V 2283 9550 50  0000 C CNN
+F 1 "FINDER-36.11" V 2374 9550 50  0000 C CNN
+F 2 "Relay_THT:Relay_SPDT_Finder_36.11" H 4120 9520 50  0001 C CNN
+F 3 "https://gfinder.findernet.com/public/attachments/36/EN/S36EN.pdf" H 2850 9550 50  0001 C CNN
+	1    2850 9550
 	0    -1   1    0   
 $EndComp
 $Comp
-L Relay:FINDER-36.11 K1
+L Relay:FINDER-36.11 K2
 U 1 1 5F99F108
 P 7750 10750
-F 0 "K1" V 7183 10750 50  0000 C CNN
+F 0 "K2" V 7183 10750 50  0000 C CNN
 F 1 "FINDER-36.11" V 7274 10750 50  0000 C CNN
 F 2 "Relay_THT:Relay_SPDT_Finder_36.11" H 9020 10720 50  0001 C CNN
 F 3 "https://gfinder.findernet.com/public/attachments/36/EN/S36EN.pdf" H 7750 10750 50  0001 C CNN
@@ -1082,10 +694,10 @@ F 3 "https://gfinder.findernet.com/public/attachments/36/EN/S36EN.pdf" H 7750 10
 	0    -1   1    0   
 $EndComp
 $Comp
-L Relay:FINDER-36.11 K2
+L Relay:FINDER-36.11 K3
 U 1 1 5F99FB9A
 P 7750 12650
-F 0 "K2" V 7183 12650 50  0000 C CNN
+F 0 "K3" V 7183 12650 50  0000 C CNN
 F 1 "FINDER-36.11" V 7274 12650 50  0000 C CNN
 F 2 "Relay_THT:Relay_SPDT_Finder_36.11" H 9020 12620 50  0001 C CNN
 F 3 "https://gfinder.findernet.com/public/attachments/36/EN/S36EN.pdf" H 7750 12650 50  0001 C CNN
@@ -1093,62 +705,523 @@ F 3 "https://gfinder.findernet.com/public/attachments/36/EN/S36EN.pdf" H 7750 12
 	0    -1   1    0   
 $EndComp
 Wire Wire Line
-	9350 5000 9750 5000
+	8050 7350 8450 7350
 Wire Wire Line
-	9550 3600 9550 5100
+	8250 5950 8250 7450
 Wire Wire Line
-	9550 3600 9750 3600
-Connection ~ 9550 5100
+	8250 5950 8450 5950
+Connection ~ 8250 7450
 Wire Wire Line
-	9550 5100 9550 5450
+	8250 7450 8250 7800
 Wire Wire Line
-	9250 4050 9250 4100
-Connection ~ 9250 4100
+	7950 6400 7950 6450
+Connection ~ 7950 6450
 Wire Wire Line
-	8800 5000 9050 5000
+	7500 7350 7750 7350
 Wire Wire Line
-	7150 4100 9250 4100
+	5850 6450 7950 6450
 Wire Wire Line
-	8800 4050 8800 5000
+	7500 6400 7500 7350
+Wire Wire Line
+	7050 6200 7200 6200
 $Comp
-L Transistor_BJT:BC557 Q4
-U 1 1 5F9FA10A
-P 8700 3850
-F 0 "Q4" H 8891 3804 50  0000 L CNN
-F 1 "BC557" H 8891 3895 50  0000 L CNN
-F 2 "Package_TO_SOT_THT:TO-92_Inline" H 8900 3775 50  0001 L CIN
-F 3 "https://www.onsemi.com/pub/Collateral/BC556BTA-D.pdf" H 8700 3850 50  0001 L CNN
-	1    8700 3850
-	1    0    0    1   
-$EndComp
-Wire Wire Line
-	8350 3850 8500 3850
-$Comp
-L Device:R R6
+L Device:R R7
 U 1 1 5F548E1A
-P 8200 3850
-F 0 "R6" V 7993 3850 50  0000 C CNN
-F 1 "2k2" V 8084 3850 50  0000 C CNN
-F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 8130 3850 50  0001 C CNN
-F 3 "~" H 8200 3850 50  0001 C CNN
-	1    8200 3850
+P 6900 6200
+F 0 "R7" V 6693 6200 50  0000 C CNN
+F 1 "2k2" V 6784 6200 50  0000 C CNN
+F 2 "Resistor_SMD:R_0805_2012Metric" V 6830 6200 50  0001 C CNN
+F 3 "~" H 6900 6200 50  0001 C CNN
+	1    6900 6200
 	0    1    1    0   
 $EndComp
-Text Label 7150 3850 0    50   ~ 0
+Text Label 5850 6200 0    50   ~ 0
 TFT_Dimming
 Wire Wire Line
-	8050 3850 7150 3850
+	6750 6200 5850 6200
 Wire Wire Line
-	9250 3500 9250 3600
-Connection ~ 9250 3600
+	7950 5850 7950 5950
+Connection ~ 7950 5950
 Wire Wire Line
-	9400 3600 9250 3600
+	8100 5950 7950 5950
 Wire Wire Line
-	9250 3600 9250 3750
+	7950 5950 7950 6100
 Wire Wire Line
-	9400 3700 9400 3600
+	8100 6050 8100 5950
 Wire Wire Line
-	9250 3600 8800 3600
+	7950 5950 7500 5950
 Wire Wire Line
-	8800 3600 8800 3650
+	7500 5950 7500 6000
+$Comp
+L Mechanical:MountingHole H1
+U 1 1 61C8330F
+P 1000 15500
+F 0 "H1" H 1100 15546 50  0000 L CNN
+F 1 "MountingHole" H 1100 15455 50  0000 L CNN
+F 2 "MountingHole:MountingHole_4.3mm_M4_DIN965" H 1000 15500 50  0001 C CNN
+F 3 "~" H 1000 15500 50  0001 C CNN
+	1    1000 15500
+	1    0    0    -1  
+$EndComp
+$Comp
+L Mechanical:MountingHole H2
+U 1 1 61C8424A
+P 2000 15500
+F 0 "H2" H 2100 15546 50  0000 L CNN
+F 1 "MountingHole" H 2100 15455 50  0000 L CNN
+F 2 "MountingHole:MountingHole_4.3mm_M4_DIN965" H 2000 15500 50  0001 C CNN
+F 3 "~" H 2000 15500 50  0001 C CNN
+	1    2000 15500
+	1    0    0    -1  
+$EndComp
+$Comp
+L Mechanical:MountingHole H3
+U 1 1 61C84780
+P 3000 15500
+F 0 "H3" H 3100 15546 50  0000 L CNN
+F 1 "MountingHole" H 3100 15455 50  0000 L CNN
+F 2 "MountingHole:MountingHole_4.3mm_M4_DIN965" H 3000 15500 50  0001 C CNN
+F 3 "~" H 3000 15500 50  0001 C CNN
+	1    3000 15500
+	1    0    0    -1  
+$EndComp
+$Comp
+L Mechanical:MountingHole H4
+U 1 1 61C84BFA
+P 4000 15500
+F 0 "H4" H 4100 15546 50  0000 L CNN
+F 1 "MountingHole" H 4100 15455 50  0000 L CNN
+F 2 "MountingHole:MountingHole_4.3mm_M4_DIN965" H 4000 15500 50  0001 C CNN
+F 3 "~" H 4000 15500 50  0001 C CNN
+	1    4000 15500
+	1    0    0    -1  
+$EndComp
+$Comp
+L MEGA_PRO_EMBED_CH340G___ATMEGA2560:MEGA_PRO_EMBED_CH340G___ATMEGA2560 U1
+U 1 1 61DEA284
+P 2400 3750
+F 0 "U1" H 2400 6417 50  0000 C CNN
+F 1 "MEGA_PRO_EMBED_CH340G___ATMEGA2560" H 2400 6326 50  0000 C CNN
+F 2 "MEGA_PRO_EMBED_CH340G___ATMEGA2560:MODULE_MEGA_PRO_EMBED_CH340G___ATMEGA2560" H 2400 3750 50  0001 L BNN
+F 3 "" H 2400 3750 50  0001 L BNN
+F 4 "" H 2400 3750 50  0001 L BNN "MAXIMUM_PACKAGE_HIEGHT"
+F 5 "Robotdyn" H 2400 3750 50  0001 L BNN "MANUFACTURER"
+F 6 "12/May/2017" H 2400 3750 50  0001 L BNN "PARTREV"
+F 7 "Manufacturer Recommendations" H 2400 3750 50  0001 L BNN "STANDARD"
+	1    2400 3750
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	800  3550 1700 3550
+Text Label 800  3550 0    50   ~ 0
+RTC_SCL
+Wire Wire Line
+	1700 3850 800  3850
+Text Label 800  3850 0    50   ~ 0
+DoorPositionDown
+Text Label 4000 3850 2    50   ~ 0
+DoorPositionUp
+Wire Wire Line
+	3100 3850 4000 3850
+Wire Wire Line
+	3100 3650 4000 3650
+Wire Wire Line
+	1700 3650 800  3650
+Wire Wire Line
+	3100 3750 4000 3750
+Wire Wire Line
+	1700 3750 800  3750
+Text Label 4000 3650 2    50   ~ 0
+SW_BackButton
+Text Label 800  3650 0    50   ~ 0
+SW_EnterButton
+Text Label 4000 3750 2    50   ~ 0
+SW_UpButton
+Text Label 800  3750 0    50   ~ 0
+SW_DownButton
+Wire Wire Line
+	3100 3550 4000 3550
+Text Label 4000 3550 2    50   ~ 0
+RTC_SDA
+Wire Wire Line
+	3100 2950 4000 2950
+Wire Wire Line
+	1700 2950 800  2950
+Wire Wire Line
+	3100 3050 4000 3050
+Text Label 4000 2950 2    50   ~ 0
+TFT_DataOrCommand
+Text Label 800  2950 0    50   ~ 0
+TFT_reset
+Text Label 4000 3050 2    50   ~ 0
+TFT_CS
+Wire Wire Line
+	3100 2750 4000 2750
+Text Label 4000 2750 2    50   ~ 0
+TFT_Dimming
+Wire Wire Line
+	1700 2850 800  2850
+Wire Wire Line
+	3100 2850 4000 2850
+Text Label 800  2850 0    50   ~ 0
+Motor_Up
+Text Label 4000 2850 2    50   ~ 0
+Motor_Down
+Wire Wire Line
+	1700 2750 800  2750
+Text Label 800  2750 0    50   ~ 0
+IndoorLighting
+$Comp
+L power:+3V3 #PWR05
+U 1 1 61FDA82D
+P 3650 1200
+F 0 "#PWR05" H 3650 1050 50  0001 C CNN
+F 1 "+3V3" H 3665 1373 50  0000 C CNN
+F 2 "" H 3650 1200 50  0001 C CNN
+F 3 "" H 3650 1200 50  0001 C CNN
+	1    3650 1200
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+5V #PWR03
+U 1 1 61FF802E
+P 3350 1200
+F 0 "#PWR03" H 3350 1050 50  0001 C CNN
+F 1 "+5V" H 3365 1373 50  0000 C CNN
+F 2 "" H 3350 1200 50  0001 C CNN
+F 3 "" H 3350 1200 50  0001 C CNN
+	1    3350 1200
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3100 1450 3350 1450
+Wire Wire Line
+	3350 1450 3350 1200
+Wire Wire Line
+	3100 1550 3650 1550
+Wire Wire Line
+	3650 1550 3650 1200
+Text Label 800  1950 0    50   ~ 0
+TFT_SPI_MOSI
+Text Label 800  2150 0    50   ~ 0
+TFT_SPI_Clock
+Wire Wire Line
+	800  1950 1500 1950
+Wire Wire Line
+	800  2150 1500 2150
+$Comp
+L power:GND #PWR04
+U 1 1 6208B53D
+P 3400 6300
+F 0 "#PWR04" H 3400 6050 50  0001 C CNN
+F 1 "GND" H 3405 6127 50  0000 C CNN
+F 2 "" H 3400 6300 50  0001 C CNN
+F 3 "" H 3400 6300 50  0001 C CNN
+	1    3400 6300
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3100 6150 3400 6150
+Wire Wire Line
+	3400 6150 3400 6300
+NoConn ~ 3100 1350
+NoConn ~ 3100 1750
+NoConn ~ 3100 1850
+NoConn ~ 3100 1950
+NoConn ~ 1700 1750
+NoConn ~ 1700 2250
+NoConn ~ 1700 5950
+NoConn ~ 1700 5850
+NoConn ~ 1700 5750
+NoConn ~ 1700 5650
+NoConn ~ 1700 5550
+NoConn ~ 1700 5450
+NoConn ~ 1700 5350
+NoConn ~ 1700 5250
+NoConn ~ 1700 5150
+NoConn ~ 1700 5050
+NoConn ~ 1700 4950
+NoConn ~ 1700 4850
+NoConn ~ 1700 4750
+NoConn ~ 1700 4650
+NoConn ~ 1700 4550
+NoConn ~ 1700 4450
+NoConn ~ 1700 4350
+NoConn ~ 1700 4250
+NoConn ~ 1700 4150
+NoConn ~ 1700 4050
+NoConn ~ 1700 3950
+NoConn ~ 3100 5950
+NoConn ~ 3100 5850
+NoConn ~ 3100 5750
+NoConn ~ 3100 5650
+NoConn ~ 3100 5550
+NoConn ~ 3100 5450
+NoConn ~ 3100 5350
+NoConn ~ 3100 5250
+NoConn ~ 3100 5150
+NoConn ~ 3100 5050
+NoConn ~ 3100 4950
+NoConn ~ 3100 4850
+NoConn ~ 3100 4750
+NoConn ~ 3100 4650
+NoConn ~ 3100 4550
+NoConn ~ 3100 4450
+NoConn ~ 3100 4350
+NoConn ~ 3100 4250
+NoConn ~ 3100 4150
+NoConn ~ 3100 4050
+NoConn ~ 3100 3950
+NoConn ~ 1700 3450
+NoConn ~ 1700 3350
+NoConn ~ 1700 3250
+NoConn ~ 1700 3150
+NoConn ~ 1700 3050
+NoConn ~ 1700 2650
+NoConn ~ 3100 2650
+NoConn ~ 3100 3250
+NoConn ~ 3100 3350
+NoConn ~ 3100 3450
+Wire Wire Line
+	2300 8800 2300 8400
+Wire Wire Line
+	2300 9350 2300 8800
+Connection ~ 2300 8800
+Wire Wire Line
+	2700 8800 2300 8800
+$Comp
+L Diode:1N4448W D2
+U 1 1 61F211F5
+P 2850 8800
+F 0 "D2" H 2750 9050 50  0000 L CNN
+F 1 "1N4448W" H 2750 8950 50  0000 L CNN
+F 2 "Diode_SMD:D_SOD-123" H 2850 8625 50  0001 C CNN
+F 3 "https://www.vishay.com/docs/85722/1n4448w.pdf" H 2850 8800 50  0001 C CNN
+	1    2850 8800
+	1    0    0    -1  
+$EndComp
+$Comp
+L Diode:1N4448W D5
+U 1 1 61F3B329
+P 7750 10000
+F 0 "D5" H 7650 10250 50  0000 L CNN
+F 1 "1N4448W" H 7650 10150 50  0000 L CNN
+F 2 "Diode_SMD:D_SOD-123" H 7750 9825 50  0001 C CNN
+F 3 "https://www.vishay.com/docs/85722/1n4448w.pdf" H 7750 10000 50  0001 C CNN
+	1    7750 10000
+	1    0    0    -1  
+$EndComp
+$Comp
+L Diode:1N4448W D6
+U 1 1 61F43E96
+P 7750 11900
+F 0 "D6" H 7650 12150 50  0000 L CNN
+F 1 "1N4448W" H 7650 12050 50  0000 L CNN
+F 2 "Diode_SMD:D_SOD-123" H 7750 11725 50  0001 C CNN
+F 3 "https://www.vishay.com/docs/85722/1n4448w.pdf" H 7750 11900 50  0001 C CNN
+	1    7750 11900
+	1    0    0    -1  
+$EndComp
+Text Notes 3000 14950 0    50   ~ 0
+A THT alternative for the transistor is a BC547 (for the NPN's) and BC557 (for the PNP's)
+$Comp
+L Transistor_BJT:BC817 Q1
+U 1 1 61F2205F
+P 3350 10700
+F 0 "Q1" H 3541 10746 50  0000 L CNN
+F 1 "BC817" H 3541 10655 50  0000 L CNN
+F 2 "Package_TO_SOT_SMD:SOT-23" H 3550 10625 50  0001 L CIN
+F 3 "https://www.onsemi.com/pub/Collateral/BC818-D.pdf" H 3350 10700 50  0001 L CNN
+	1    3350 10700
+	1    0    0    -1  
+$EndComp
+$Comp
+L Transistor_BJT:BC817 Q3
+U 1 1 61F23053
+P 8550 13550
+F 0 "Q3" H 8741 13596 50  0000 L CNN
+F 1 "BC817" H 8741 13505 50  0000 L CNN
+F 2 "Package_TO_SOT_SMD:SOT-23" H 8750 13475 50  0001 L CIN
+F 3 "https://www.onsemi.com/pub/Collateral/BC818-D.pdf" H 8550 13550 50  0001 L CNN
+	1    8550 13550
+	1    0    0    -1  
+$EndComp
+$Comp
+L Transistor_BJT:BC817 Q2
+U 1 1 61F23F76
+P 8150 13900
+F 0 "Q2" H 8341 13946 50  0000 L CNN
+F 1 "BC817" H 8341 13855 50  0000 L CNN
+F 2 "Package_TO_SOT_SMD:SOT-23" H 8350 13825 50  0001 L CIN
+F 3 "https://www.onsemi.com/pub/Collateral/BC818-D.pdf" H 8150 13900 50  0001 L CNN
+	1    8150 13900
+	1    0    0    -1  
+$EndComp
+$Comp
+L Transistor_BJT:BC807 Q4
+U 1 1 61FA6D34
+P 7400 6200
+F 0 "Q4" H 7591 6154 50  0000 L CNN
+F 1 "BC807" H 7591 6245 50  0000 L CNN
+F 2 "Package_TO_SOT_SMD:SOT-23" H 7600 6125 50  0001 L CIN
+F 3 "https://www.onsemi.com/pub/Collateral/BC808-D.pdf" H 7400 6200 50  0001 L CNN
+	1    7400 6200
+	1    0    0    1   
+$EndComp
+$Comp
+L TC00500:TC00500 U2
+U 1 1 6202C20B
+P 9750 1850
+F 0 "U2" H 9750 2317 50  0000 C CNN
+F 1 "TC00500" H 9750 2226 50  0000 C CNN
+F 2 "TC00500_DS3231_AT24C32:MODULE_TC00500_FHk_BatteryUpside" H 9750 1850 50  0001 L BNN
+F 3 "" H 9750 1850 50  0001 L BNN
+F 4 "N/A" H 9750 1850 50  0001 L BNN "PARTREV"
+F 5 "YKS" H 9750 1850 50  0001 L BNN "MANUFACTURER"
+F 6 "37.5 mm" H 9750 1850 50  0001 L BNN "MAXIMUM_PACKAGE_HEIGHT"
+F 7 "Manufacturer Recommendations" H 9750 1850 50  0001 L BNN "STANDARD"
+	1    9750 1850
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+5V #PWR0101
+U 1 1 6206CBEE
+P 10450 1550
+F 0 "#PWR0101" H 10450 1400 50  0001 C CNN
+F 1 "+5V" H 10465 1723 50  0000 C CNN
+F 2 "" H 10450 1550 50  0001 C CNN
+F 3 "" H 10450 1550 50  0001 C CNN
+	1    10450 1550
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0102
+U 1 1 6206D454
+P 10450 2250
+F 0 "#PWR0102" H 10450 2000 50  0001 C CNN
+F 1 "GND" H 10455 2077 50  0000 C CNN
+F 2 "" H 10450 2250 50  0001 C CNN
+F 3 "" H 10450 2250 50  0001 C CNN
+	1    10450 2250
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	10350 2150 10450 2150
+Wire Wire Line
+	10450 2150 10450 2250
+Wire Wire Line
+	10350 1650 10450 1650
+Wire Wire Line
+	10450 1650 10450 1550
+NoConn ~ 10350 1850
+NoConn ~ 10350 1950
+Wire Wire Line
+	7850 1850 9150 1850
+Wire Wire Line
+	7850 1950 9150 1950
+$Comp
+L Connector:Conn_01x16_Female J6
+U 1 1 5EDD9B3A
+P 8650 6650
+F 0 "J6" H 8400 5600 50  0000 C CNN
+F 1 "KMR-1.8 SPI" H 8750 5700 50  0000 C CNN
+F 2 "KMR-1:KMR-1.8-SPI" H 8650 6650 50  0001 C CNN
+F 3 "~" H 8650 6650 50  0001 C CNN
+	1    8650 6650
+	1    0    0    -1  
+$EndComp
+Text Label 5850 7150 0    50   ~ 0
+SD_MOSI
+Text Label 5850 7250 0    50   ~ 0
+SD_CS
+Text Label 4000 3150 2    50   ~ 0
+SD_CS
+Text Label 800  2050 0    50   ~ 0
+SD_MISO
+Text Label 800  1850 0    50   ~ 0
+SD_MOSI
+Text Label 800  2250 0    50   ~ 0
+SD_SCK
+Wire Wire Line
+	800  1850 1500 1850
+Wire Wire Line
+	1500 1850 1500 1950
+Connection ~ 1500 1950
+Wire Wire Line
+	1500 1950 1700 1950
+Wire Wire Line
+	800  2050 1700 2050
+Wire Wire Line
+	800  2250 1500 2250
+Wire Wire Line
+	1500 2250 1500 2150
+Connection ~ 1500 2150
+Wire Wire Line
+	1500 2150 1700 2150
+Wire Wire Line
+	4000 3150 3100 3150
+Text Label 5850 6950 0    50   ~ 0
+SD_SCK
+Text Label 5850 7050 0    50   ~ 0
+SD_MISO
+$Comp
+L Jumper:SolderJumper_2_Bridged JP1
+U 1 1 62285B41
+P 6500 6950
+F 0 "JP1" H 6650 7000 50  0000 C CNN
+F 1 "SolderJumper_2_Bridged" H 6500 7064 50  0001 C CNN
+F 2 "Jumper:SolderJumper-2_P1.3mm_Bridged_RoundedPad1.0x1.5mm" H 6500 6950 50  0001 C CNN
+F 3 "~" H 6500 6950 50  0001 C CNN
+	1    6500 6950
+	1    0    0    -1  
+$EndComp
+$Comp
+L Jumper:SolderJumper_2_Bridged JP2
+U 1 1 6235441D
+P 6700 7050
+F 0 "JP2" H 6850 7100 50  0000 C CNN
+F 1 "SolderJumper_2_Bridged" H 6700 7164 50  0001 C CNN
+F 2 "Jumper:SolderJumper-2_P1.3mm_Bridged_RoundedPad1.0x1.5mm" H 6700 7050 50  0001 C CNN
+F 3 "~" H 6700 7050 50  0001 C CNN
+	1    6700 7050
+	1    0    0    -1  
+$EndComp
+$Comp
+L Jumper:SolderJumper_2_Bridged JP3
+U 1 1 62354E9E
+P 6900 7150
+F 0 "JP3" H 7050 7200 50  0000 C CNN
+F 1 "SolderJumper_2_Bridged" H 6900 7264 50  0001 C CNN
+F 2 "Jumper:SolderJumper-2_P1.3mm_Bridged_RoundedPad1.0x1.5mm" H 6900 7150 50  0001 C CNN
+F 3 "~" H 6900 7150 50  0001 C CNN
+	1    6900 7150
+	1    0    0    -1  
+$EndComp
+$Comp
+L Jumper:SolderJumper_2_Bridged JP4
+U 1 1 62355A97
+P 7100 7250
+F 0 "JP4" H 7250 7300 50  0000 C CNN
+F 1 "SolderJumper_2_Bridged" H 7100 7364 50  0001 C CNN
+F 2 "Jumper:SolderJumper-2_P1.3mm_Bridged_RoundedPad1.0x1.5mm" H 7100 7250 50  0001 C CNN
+F 3 "~" H 7100 7250 50  0001 C CNN
+	1    7100 7250
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5850 6950 6350 6950
+Wire Wire Line
+	5850 7050 6550 7050
+Wire Wire Line
+	5850 7150 6750 7150
+Wire Wire Line
+	5850 7250 6950 7250
+Wire Wire Line
+	6650 6950 8450 6950
+Wire Wire Line
+	6850 7050 8450 7050
+Wire Wire Line
+	7050 7150 8450 7150
+Wire Wire Line
+	7250 7250 8450 7250
 $EndSCHEMATC

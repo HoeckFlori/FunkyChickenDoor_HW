@@ -1,4 +1,8 @@
 (sym_lib_table
   (lib (name arduino)(type Legacy)(uri "/home/florian/Dokumente/Projekte Privat/2020_Huehnerstall/FunkyChickenDoor_HW/extLibs/arduino-kicad-library/arduino.lib")(options "")(descr ""))
   (lib (name SparkFun-Displays)(type Legacy)(uri "/home/florian/Dokumente/Projekte Privat/2020_Huehnerstall/FunkyChickenDoor_HW/extLibs/SparkFun-KiCad-Libraries/Libraries/SparkFun-Displays.lib")(options "")(descr ""))
+  (lib (name 2008-mega2560promini-cache)(type Legacy)(uri "/home/florian/Dokumente/Projekte Privat/2020_Huehnerstall/FunkyChickenDoor_HW/extLibs/Mega2560_Pro_Mini_Meduino/2008-mega2560promini-cache.lib")(options "")(descr ""))
+  (lib (name meduino-pro-mini)(type Legacy)(uri "/home/florian/Dokumente/Projekte Privat/2020_Huehnerstall/FunkyChickenDoor_HW/extLibs/Mega2560_Pro_Mini_Meduino/meduino-pro-mini.lib")(options "")(descr ""))
+  (lib (name MEGA_PRO_EMBED_CH340G___ATMEGA2560)(type Legacy)(uri "/home/florian/Dokumente/Projekte Privat/2020_Huehnerstall/FunkyChickenDoor_HW/extLibs/MEGA_PRO_EMBED_CH340G___ATMEGA2560/MEGA_PRO_EMBED_CH340G___ATMEGA2560.lib")(options "")(descr ""))
+  (lib (name TC00500)(type Legacy)(uri "/home/florian/Dokumente/Projekte Privat/2020_Huehnerstall/FunkyChickenDoor_HW/extLibs/TC00500_DS3231_AT24C32/TC00500.lib")(options "")(descr ""))
 )
