@@ -5,8 +5,8 @@ $Descr A3 11693 16535 portrait
 encoding utf-8
 Sheet 1 1
 Title "'Funky Chicken Door', Version 1 (the development version)"
-Date "2020-11-01"
-Rev ""
+Date "2022-03-18"
+Rev "v1.0.0"
 Comp "Florian Höck"
 Comment1 ""
 Comment2 ""
